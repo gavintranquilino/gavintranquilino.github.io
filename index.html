@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Scale on small devices-->
+        <title>Gavin's Portfolio</title> <!--Tab title-->
+        <link rel="icon" href="img/choking.png">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Differences between browsers-->
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" /> <!--Fontawesome for brand icons-->
+
+        <!--Google Fonts-->
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <!-- <img src="img/logo.png" alt=""> -->
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+                <!--Styled up button-->
+            </button>
+
+            <button class="theme-toggle" aria-label="toggle theme">
+                <span class="sun-moon">DARK MODE</span>
+            </button>
+            
+            <button onclick="topFunction()" class="to-top">
+                <span class="up-arrow"></span>
+            </button>
+                <nav class="nav">
+                <ul class="nav__list"> <!--Dunder = subclass of nav-->
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> 
+                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>   
+                </ul>
+            </nav> 
+
+        </header>
+
+        <!--Introduction-->
+        <section class="intro" id="home"> <!--class for styling, id for anchoring-->
+            <h1 class="section__title section__title--intro"> <!--Double Hyphen = Modifier class to mod section__title-->
+                Hi, I am <strong>Gavin</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">tinkerer / dev</p>
+            <img src="img/cry.png" alt="a picture of Gavin" class="intro__img">
+        </section>
+
+        <!--My Services-->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I do</h2>
+            <!--Three Columns-->
+            <div class="services">
+                <div class="service">
+                    <h3>Python Programming</h3>
+                    <p><strong>I do Python Programming lol i should link that soon</strong> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div> <!--service-->
+
+                <div class="service">
+                    <h3>HTML, CSS, JAVASCRIPT</h3>
+                    <p><strong>This website maybe? Idk I'm just tryna style this first</strong> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div> <!--service-->
+
+                <div class="service">
+                    <h3>Arduino</h3>
+                    <p><strong>Yeah I should link a vid or something idk</strong> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div> <!--service-->
+            </div> <!--services-->
+
+            <a href="#work" class="btn">My Work</a>
+        </section>
+
+        <!--About Me-->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about">Curiosity-filled Student</p> <!--Use paragraph as subtitle, headers for new sections-->
+
+            <div class="about-me__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <img src="img/cry.png" alt="a picture of Gavin" class="about-me__img">
+        </section>
+
+        <!--My Work-->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">My projects and contributions</p>
+
+            <div class="portfolio">
+                <!--Portfolio item 1-->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/cry.png" alt="" class="portfolio__img">
+                </a>
+
+                <!--Portfolio item 2-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/smirk.png" alt="" class="portfolio__img">
+                </a>
+
+                <!--Portfolio item 3-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/choking.png" alt="" class="portfolio__img">
+                </a>
+
+                <!--Portfolio item 4-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/choking.png" alt="" class="portfolio__img">
+                </a>
+
+                <!--Portfolio item 5-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/smirk.png" alt="" class="portfolio__img">
+                </a>
+
+                <!--Portfolio item 6-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/cry.png" alt="" class="portfolio__img">
+                </a>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <footer class="footer">
+            <a href="mailto:guhbean@outlook.com" class="footer__link">guhbean@outlook.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/GuhBean">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/GuhBean">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/GuhBean">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/GuhBean">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="js/index.js"></script>
+
+    </body>
+</html>
