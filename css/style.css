@@ -539,6 +539,7 @@ h3 { font-size: var(--fs-h3); }
 .individual-item img {
     padding: 0 2em 2em;
     max-width: 1000px;
+    width: 80%;
     margin: 0 auto;
 }
 
