@@ -524,7 +524,7 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .social-list__item + .social-list__item {
-    margin-left: 1em;
+    margin-left: 0.5em;
 }
 
 .social-list__link {
@@ -539,7 +539,7 @@ h3 { font-size: var(--fs-h3); }
 .individual-item img {
     padding: 0 2em 2em;
     max-width: 1000px;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
