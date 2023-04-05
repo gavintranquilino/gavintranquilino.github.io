@@ -1,146 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Scale on small devices-->
     <title>COVID-19 Screening Bypass</title>
     <!--Tab title-->
-    <link rel="icon" href="img/smile-round.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" href="img/smile-round.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <!--Differences between browsers-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <!--Fontawesome for brand icons-->
 
     <!-- Link Preview with Open Graph Markup -->
     <meta property="og:url" content="https://guhbean.github.io/" />
     <meta property="og:type" content="portfolio" />
     <meta property="og:title" content="Gavin's Online Portfolio" />
-    <meta property="og:description" content="A simple tool to complete the Ontario COVID-19 Screening tool and email the results." />
-    <meta property="og:image" content="https://guhbean.github.io/img/covid-19.png" />
+    <meta
+      property="og:description"
+      content="A simple tool to complete the Ontario COVID-19 Screening tool and email the results."
+    />
+    <meta
+      property="og:image"
+      content="https://guhbean.github.io/img/covid-19.png"
+    />
 
     <!--Google Fonts-->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
 
-        <div class="logo">
-            <!-- <img src="img/logo.png" alt=""> -->
-        </div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-            <!--Styled up button-->
-        </button>
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
 
-        <button class="theme-toggle" aria-label="toggle theme">
-            <span class="sun-moon">Change Theme?</span>
-        </button>
-
-        <button onclick="topFunction()" class="to-top">
-            <span class="up-arrow"></span>
-        </button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <!--Dunder = subclass of nav-->
-                <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="index.html#services" class="nav__link">What I Do</a></li>
-                <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
-                <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
-            </ul>
-        </nav>
-
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!--Introduction-->
     <section class="intro" id="home">
-        <!--class for styling, id for anchoring-->
-        <h1 class="section__title section__title--intro">
-            <!--Double Hyphen = Modifier class to mod section__title-->
-            This is my <strong>COVID-19 Screening Bypass</strong>
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">Not Intended for Malicious Intent</p>
-        <img src="img/covid-19.png" alt="COVID-19" class="intro__img">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        This is my <strong>COVID Screening Bypass</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Not Intended for Malicious Intent
+      </p>
+      <img src="img/covid-19.png" alt="COVID-19" class="intro__img" />
     </section>
 
     <div class="individual-item">
-        <h2>What does it do?</h2>
-        <p>This program is a project I designed to quickly fill out the <a
-            href="https://covid-19.ontario.ca/school-screening/">COVID-19 Screening Tool</a>. Every time I went to school, I had
-        to fill out the COVID-19 Screening Form as a proof that I can enter the building. The questions on the form are very
-        straightforward and common sense. While this program is <i>not</i> inteded to lie on the form, this was created to speed up the
-        process of having to fill out a valid form every day. I designed this program using Python and the selenium library.</p>
-        <h2>Try it out yourself!</h2>
-        <iframe frameborder="0" width="100%" height="500px"
-            src="https://repl.it/@GuhBean/ontario-covid19-screening-bypass?lite=1&outputonly=1">
-        </iframe>
-        <h2>How does it work?</h2>
-        <p>This program uses <a href="https://python.org/">Python</a> and a few third-party libraries such as, selenium, smtplib,
-        and email. The selenium library is
-        a web testing tool to run scripts and commands on a browser. This library is used in this program to handle the actions
-        on the screening tool like opening the website, pressing buttons, etc. The smtplib and email libraries are both used
-        together to handle sending automated emails to the users that are listed in the config files.</p>
-        <p>On startup, the program opens a "webdriver", which is just fancy for "broswer for robots" as it allows commands and
-        scripts to be ran on specific elements of a website. The next step is to open the website of the screening tool. Once
-        the tool has opened, the program follows a series of steps to fill out the screening form. The program looks for buttons
-        to click via their respective xpath values. These xpaths are just names of certain elements of a website like buttons,
-        text, containers, etc. Once a valid form has been filled, the program then takes a screenshot of the final page and
-        closes the webdriver.</p>
-        <p>After the webdriver has been closed, the program then connects to an email address of the user's choice. Then, an SMTP
-        connection to the email address will be created. After the connection, the program reads the email template and contacts
-        list in order to find all the email addresses to send the screenshot to. The program, one by one, sends an email to all
-        the contacts in the contacts list. While this email feature is not available in the web version above, this program is
-        open sourced on <a href="https://github.com/GuhBean/ontario-covid19-screening-bypass">GitHub</a>, ready for you to use.</p>
+      <h2>What does it do?</h2>
+      <p>
+        This program is a project I designed to quickly fill out the
+        <a href="https://covid-19.ontario.ca/school-screening/"
+          >COVID-19 Screening Tool</a
+        >. Every time I went to school, I had to fill out the COVID-19 Screening
+        Form as a proof that I can enter the building. The questions on the form
+        are very straightforward and common sense. While this program is
+        <i>not</i> inteded to lie on the form, this was created to speed up the
+        process of having to fill out a valid form every day. I designed this
+        program using Python and the selenium library.
+      </p>
+
+      <h2>Video Demonstration</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UZwzyrAIt7A"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      <p>
+        If you can't already tell, this is satire. I'm not actually sick nor did
+        I get anyone sick. Though, the Python script is pretty sick tbh.
+      </p>
+
+      <h2>
+        Try it out yourself! <br />
+        (NOT WORKING 2023)
+      </h2>
+      <iframe
+        frameborder="0"
+        width="100%"
+        height="500px"
+        src="https://repl.it/@GuhBean/ontario-covid19-screening-bypass?lite=1&outputonly=1"
+      >
+      </iframe>
+
+      <p></p>
+
+      <h2>How does it work?</h2>
+      <p>
+        This program uses <a href="https://python.org/">Python</a> and a few
+        third-party libraries such as, selenium, smtplib, and email. The
+        selenium library is a web testing tool to run scripts and commands on a
+        browser. This library is used in this program to handle the actions on
+        the screening tool like opening the website, pressing buttons, etc. The
+        smtplib and email libraries are both used together to handle sending
+        automated emails to the users that are listed in the config files.
+      </p>
+      <p>
+        On startup, the program opens a "webdriver", which is just fancy for
+        "broswer for robots" as it allows commands and scripts to be ran on
+        specific elements of a website. The next step is to open the website of
+        the screening tool. Once the tool has opened, the program follows a
+        series of steps to fill out the screening form. The program looks for
+        buttons to click via their respective xpath values. These xpaths are
+        just names of certain elements of a website like buttons, text,
+        containers, etc. Once a valid form has been filled, the program then
+        takes a screenshot of the final page and closes the webdriver.
+      </p>
+      <p>
+        After the webdriver has been closed, the program then connects to an
+        email address of the user's choice. Then, an SMTP connection to the
+        email address will be created. After the connection, the program reads
+        the email template and contacts list in order to find all the email
+        addresses to send the screenshot to. The program, one by one, sends an
+        email to all the contacts in the contacts list. While this email feature
+        is not available in the web version above, this program is open sourced
+        on
+        <a href="https://github.com/GuhBean/ontario-covid19-screening-bypass"
+          >GitHub</a
+        >, ready for you to use.
+      </p>
+
+      <h2>TAS WORLD RECORD??</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZsbxI7mqVh0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+        web-share"
+        allowfullscreen
+      ></iframe>
     </div>
 
     <!--Footer-->
     <footer class="footer">
-        <a href="mailto:guhbean@outlook.com" class="footer__link">guhbean@outlook.com</a>
-        <ul class="social-list">
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/GuhBean">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://stackoverflow.com/users/13495609/guhbean">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.youtube.com/channel/UCnBxk-HBG0jXScCYvieHLDA">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.instagram.com/guhbean/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://twitter.com/GuhBean">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-        </ul>
+      <a href="mailto:guhbean@outlook.com" class="footer__link"
+        >guhbean@outlook.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://github.com/GuhBean">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://stackoverflow.com/users/13495609/guhbean"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.youtube.com/channel/UCnBxk-HBG0jXScCYvieHLDA"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
+            <i class="fab fa-discord"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.instagram.com/guhbean/"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com/GuhBean">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
 
     <script src="js/index.js"></script>
-
-</body>
-
+  </body>
 </html>

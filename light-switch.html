@@ -1,123 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Scale on small devices-->
     <title>Light Switch</title>
     <!--Tab title-->
-    <link rel="icon" href="img/smile-round.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" href="img/smile-round.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <!--Differences between browsers-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <!--Fontawesome for brand icons-->
 
     <!-- Link Preview with Open Graph Markup -->
     <meta property="og:url" content="https://guhbean.github.io/" />
     <meta property="og:type" content="portfolio" />
     <meta property="og:title" content="Gavin's Online Portfolio" />
-    <meta property="og:description" content="A bot to generate views on a YouTube video." />
-    <meta property="og:image" content="https://guhbean.github.io/img/youtube-py.png" />
-    
+    <meta
+      property="og:description"
+      content="A bot to generate views on a YouTube video."
+    />
+    <meta
+      property="og:image"
+      content="https://guhbean.github.io/img/youtube-py.png"
+    />
+
     <!--Google Fonts-->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
 
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
 
-        <div class="logo">
-            <!-- <img src="img/logo.png" alt=""> -->
-        </div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-            <!--Styled up button-->
-        </button>
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
 
-        <button class="theme-toggle" aria-label="toggle theme">
-            <span class="sun-moon">Change Theme?</span>
-        </button>
-
-        <button onclick="topFunction()" class="to-top">
-            <span class="up-arrow"></span>
-        </button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <!--Dunder = subclass of nav-->
-                <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="index.html#services" class="nav__link">What I Do</a></li>
-                <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
-                <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
-            </ul>
-        </nav>
-    
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!--Introduction-->
-    <section class="intro" id="home"> <!--class for styling, id for anchoring-->
-        <h1 class="section__title section__title--intro"> <!--Double Hyphen = Modifier class to mod section__title-->
-            This is my <strong>Automated Light Switch Bot</strong>
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">because i sleep on the top bunk of my bed</p>
-        <img src="img/light-switch.png" alt="Picture of the light switch" class="intro__img">
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        This is my <strong>Automated Light Switch Bot</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        because i sleep on the top bunk of my bed
+      </p>
+      <img
+        src="img/light-switch.png"
+        alt="Picture of the light switch"
+        class="intro__img"
+      />
     </section>
 
     <div class="individual-item">
-        <p>3D printed, servo actuated, Raspberry Pi webserver, Discord API</p>
-        <a href="" target="_blank"><img src="img/light-switch.png" alt=""></a>
-        <h2>How Did I Do It?</h2>
-        <p>
-        </p>
-        <p></p>
+      <p>
+        3D printed, Servo actuated, Raspberry Pi webserver, Discord API
+        Integration.
+      </p>
+
+      <p>
+        I wanted to create a device that can manually click the rocker switch of
+        my room light on and off. I did not want to have to mess with any of the
+        electrical circuits of the light switch system underneath the cover.
+      </p>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PL2zKq55_kXLd6ajXMeEt_8hbf1B00W04K"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      <h2>3D Printed Bracket</h2>
+      <p>
+        The bracket I designed for the servo motor was modelled in Fusion360.
+      </p>
+      <a
+        href="https://youtube.com/playlist?list=PL2zKq55_kXLd6ajXMeEt_8hbf1B00W04K"
+        target="_blank"
+        ><img
+          src="img/light-switch6.png"
+          alt="the 3D model of the servo bracket"
+      /></a>
+      <p>
+        After learning much of the basics of CAD software, I was comfortable
+        with modelling the bracket on my own with my own measurements. Alongside
+        the 3D printer I bought myself, I also purchased digital calipers in
+        order to do some real measurements and real prototyping.
+      </p>
+
+      <p>
+        Below I have attached the finished bracket mount for the servo. I
+        contemplated if I wanted it in white or black since those were my colors
+        of filament at the time. I settled with black in order to have some
+        contrast (make it panda themed almost)
+      </p>
+
+      <a
+        href="https://youtube.com/playlist?list=PL2zKq55_kXLd6ajXMeEt_8hbf1B00W04K"
+        target="_blank"
+        ><img src="img/light-switch4.png" alt="the 3D printed bracket"
+      /></a>
+
+      <a
+        href="https://youtube.com/playlist?list=PL2zKq55_kXLd6ajXMeEt_8hbf1B00W04K"
+        target="_blank"
+        ><img
+          src="img/light-switch5.png"
+          alt="the 3D printed bracket with servo"
+      /></a>
+
+      <p>
+        If you can see, I created the bracket with the rocker switch in mind, so
+        when the servo is moved, it will either push the rocker switch on or off
+        on command.
+      </p>
+      <p>
+        The main challenge comes with the servo only having limited degrees of
+        rotation, so I had to cleverly offest the servo arm 90&deg; in order to
+        turn the servo within its limited range, enough to hit either side of
+        the rocker switch.
+      </p>
+
+      <a
+        href="https://youtube.com/playlist?list=PL2zKq55_kXLd6ajXMeEt_8hbf1B00W04K"
+        target="_blank"
+        ><img
+          src="img/light-switch3.png"
+          alt="back view of 3D bracket with servo"
+      /></a>
+
+      <a
+        href="https://youtube.com/playlist?list=PL2zKq55_kXLd6ajXMeEt_8hbf1B00W04K"
+        target="_blank"
+        ><img
+          src="img/light-switch2.png"
+          alt="back view of 3D bracket with servo"
+      /></a>
+
+      <p>
+        Messing with my 3D printer settings however, I do want to turn on
+        ironing in order to smooth out the final print. I am planning to include
+        modular connectors in order to cusomize what I can place and store on
+        the light switch bracket. I can potentially use it to add sensors and
+        mounts and swap them out easily as if they were Legos.
+      </p>
     </div>
 
     <!--Footer-->
     <footer class="footer">
-        <a href="mailto:guhbean@outlook.com" class="footer__link">guhbean@outlook.com</a>
-        <ul class="social-list">
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/GuhBean">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://stackoverflow.com/users/13495609/guhbean">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.youtube.com/channel/UCnBxk-HBG0jXScCYvieHLDA">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.instagram.com/guhbean/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://twitter.com/GuhBean">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-        </ul>
+      <a href="mailto:guhbean@outlook.com" class="footer__link"
+        >guhbean@outlook.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://github.com/GuhBean">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://stackoverflow.com/users/13495609/guhbean"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.youtube.com/channel/UCnBxk-HBG0jXScCYvieHLDA"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
+            <i class="fab fa-discord"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.instagram.com/guhbean/"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com/GuhBean">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
 
     <script src="js/index.js"></script>
-
-</body>
-
+  </body>
 </html>

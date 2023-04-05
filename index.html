@@ -1,226 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Scale on small devices-->
+    <title>Gavin's Portfolio</title>
+    <!--Tab title-->
+    <link rel="icon" href="img/smile-round.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!--Differences between browsers-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <!--Fontawesome for brand icons-->
 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Scale on small devices-->
-        <title>Gavin's Portfolio</title> <!--Tab title-->
-        <link rel="icon" href="img/smile-round.png">
-        <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--Differences between browsers-->
-        <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" /> <!--Fontawesome for brand icons-->
+    <!-- Link Preview with Open Graph Markup -->
+    <meta property="og:url" content="https://guhbean.github.io/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:title" content="Gavin's Online Portfolio" />
+    <meta
+      property="og:description"
+      content="Homepage for the online portfolio. Made with HTML, CSS, and JavaScript."
+    />
+    <meta
+      property="og:image"
+      content="https://guhbean.github.io/img/smile.png"
+    />
 
-        <!-- Link Preview with Open Graph Markup -->
-        <meta property="og:url" content="https://guhbean.github.io/" />
-        <meta property="og:type" content="portfolio" />
-        <meta property="og:title" content="Gavin's Online Portfolio" />
-        <meta property="og:description" 
-            content="Homepage for the online portfolio. Made with HTML, CSS, and JavaScript." />
-        <meta property="og:image" content="https://guhbean.github.io/img/smile.png" />
+    <!--Google Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
 
-        <!--Google Fonts-->
-        <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
 
-        <link rel="stylesheet" href="css/style.css">
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
 
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <!-- <img src="img/logo.png" alt=""> -->
-            </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-                <!--Styled up button-->
-            </button>
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-            <button class="theme-toggle" aria-label="toggle theme">
-                <span class="sun-moon">Change Theme?</span>
-            </button>
-            
-            <button onclick="topFunction()" class="to-top">
-                <span class="up-arrow"></span>
-            </button>
-                <nav class="nav">
-                <ul class="nav__list"> <!--Dunder = subclass of nav-->
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> 
-                    <li class="nav__item"><a href="#services" class="nav__link">What I Do</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>   
-                </ul>
-            </nav> 
+    <!--Introduction-->
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        Hi, I am <strong>Gavin</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">tinkerer / dev</p>
+      <img src="img/smile.png" alt="a picture of Gavin" class="intro__img" />
+    </section>
 
-        </header>
+    <!--My Services-->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">What I do</h2>
+      <!--Three Columns-->
+      <div class="services">
+        <div class="service">
+          <h3>Python Programming</h3>
+          <p>
+            Python is my main programming language. From scripting to local
+            webservers for home automation, I use Python on the regular. My
+            proficiency in Python has been mostly attributed to self-directed
+            learning, enough to compete in the 2023 Canada Computing Contest. I
+            have always had a thing for programming, especially as it makes
+            sense logically. I find satisfaction in being able to create a
+            program that runs reliably, and is scalable. Much of my digital
+            literacy and proficiency, and research skills I attribute to
+            programming as a whole. My favorite project with Python is
+            definitely my Discord bot for general purposes seen below.
+          </p>
+        </div>
+        <!--service-->
 
-        <!--Introduction-->
-        <section class="intro" id="home"> <!--class for styling, id for anchoring-->
-            <h1 class="section__title section__title--intro"> <!--Double Hyphen = Modifier class to mod section__title-->
-                Hi, I am <strong>Gavin</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">tinkerer / dev</p>
-            <img src="img/smile.png" alt="a picture of Gavin" class="intro__img">
-        </section>
+        <div class="service">
+          <h3>3D printing and CAD</h3>
+          <p>
+            Software aside, I bought myself a 3d printer as a Christmas gift for
+            myself in 2022. <i>(Probably the best gift I've gotten)</i>. Since
+            then, I've been able to learn CAD software such as Fusion360 and
+            SolidWorks (contribution in FIRST Robotics Team 2702). I have used
+            3D printing to create characters, gifts, and stamps. One of my
+            dreams is to be proficient in creating, so that I can combine
+            mechanical and electronics design to create gadgets. I find it
+            satisfying whenever I can birth my ideas into the real world through
+            CAD design. Probably my favorite 3D printing project is my crude
+            home light switch automation. More on it below.
+          </p>
+        </div>
+        <!--service-->
 
-        <!--My Services-->
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <!--Three Columns-->
-            <div class="services">
-                <div class="service">
-                    <h3>Python Programming</h3>
-                    <p>Python is my main programming language. From scripting to local webservers for home automation, 
-                        I use Python on the regular. My proficiency in Python has been mostly attributed to self-directed learning,
-                        enough to compete in the 2023 Canada Computing Contest. I have always had a thing for programming, especially as
-                        it makes sense logically. I find satisfaction in being able to create a program that runs reliably, and is scalable.
-                        Much of my digital literacy and proficiency, and research skills I attribute to programming as a whole. My favorite project with Python is definitely my 
-                        Discord bot for general purposes seen below.
-                    </p>
-                </div> <!--service-->
+        <div class="service">
+          <h3>Arduino and Raspberry Pi</h3>
+          <p>
+            With an Arduino and a Raspberry Pi, I am able to create a bridge
+            between software and hardware. With a microcontroller such as the
+            Arduino UNO, I have created a motion sensor and custom LED light
+            control, using the Arduino programming langauge that is based off of
+            C++. While I am still exploring how to use this technology, I am
+            eager to explore the capabilites of this device. With my Raspberry
+            Pi, I am able to host my Discord bot, and create a cheap web server
+            for my other websites. I have explored the software of the Raspberry
+            Pi using the Raspberry Pi Operating System, which based on Debian
+            Linux. I was able to connect my desktop to my Raspberry Pi through
+            Secure Shell in order to upload files and start my webserver
+            wirelessly.
+          </p>
+        </div>
+        <!--service-->
+      </div>
+      <!--services-->
 
-                <div class="service">
-                    <h3>3D printing and CAD</h3>
-                    <p>Software aside, I bought myself a 3d printer as a Christmas gift for myself in 2022. 
-                        <i>(Probably the best gift I've gotten)</i>. Since then, I've been able to learn CAD software such as
-                        Fusion360 and SolidWorks (contribution in FIRST Robotics Team 2702). I have used 3D printing to create characters,
-                        gifts, and stamps. One of my dreams is to be proficient in creating, so that I can combine mechanical and
-                        electronics design to create gadgets. I find it satisfying whenever I can birth my ideas into the real world through 
-                        CAD design. Probably my favorite 3D printing project is my crude home light switch automation. More on it below.
-                    </p>
+      <a href="#work" class="btn">My Work</a>
+    </section>
 
-                </div> <!--service-->
+    <!--About Me-->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">More about me</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Curiosity-filled Student
+      </p>
+      <!--Use paragraph as subtitle, headers for new sections-->
 
-                <div class="service">
-                    <h3>Arduino and Raspberry Pi</h3>
-                    <p>With an Arduino and a Raspberry Pi, I am able to create a bridge between software and hardware. With a microcontroller
-                    such as the Arduino UNO, I have created a motion sensor and custom LED light control, using the Arduino programming
-                    langauge that is based off of C++. While I am still exploring how to use this technology, I am eager to explore the
-                    capabilites of this device. With my Raspberry Pi, I am able to host my Discord bot, and create a cheap web server for my
-                    other websites. I have explored the software of the Raspberry Pi using the Raspberry Pi Operating System, which based on
-                    Debian Linux. I was able to connect my desktop to my Raspberry Pi through Secure Shell in order to upload files and
-                    start my webserver wirelessly.</p>
-                </div> <!--service-->
-            </div> <!--services-->
+      <div class="about-me__body">
+        <p>
+          I am a highschool student, who wants to know a little about
+          everything. My main goal is to expand my knowledge on new
+          technologies. I always wanted to know how to program and work with
+          computers, so I waited and waited, hoping that I would soon learn how
+          to code. I did not realize that there were so many free and online
+          tutorials and resources that I can use to teach myself how to code. I
+          did not want to wait for my school to teach me, if I could do it
+          myself.
+        </p>
 
-            <a href="#work" class="btn">My Work</a>
-        </section>
+        <p>
+          I challenged myself to teach myself the skills that I wanted to learn.
+          I taught myself how to make games on Scratch, make bots with Python,
+          CAD printables, etc. By having the initiative and patience to teach
+          myself the skills I wanted to know, I was able to let my creativity
+          spill, and work on projects that I wanted to work on. I learned that I
+          did had the capability to teach myself these new concepts, and how I
+          could apply them to my daily life.
+        </p>
+      </div>
 
-        <!--About Me-->
-        <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">More about me</h2>
-            <p class="section__subtitle section__subtitle--about">Curiosity-filled Student</p> <!--Use paragraph as subtitle, headers for new sections-->
+      <img src="img/smile.png" alt="a picture of Gavin" class="about-me__img" />
+    </section>
 
-            <div class="about-me__body">
-                <p>I am a highschool student, who wants to know a little about everything. My main goal is to expand my knowledge
-                on new technologies. I always wanted to know how to program and work with computers, so I waited and waited, hoping that
-                I would soon learn how to code. I did not realize that there were so many free and online tutorials and resources that I
-                can use to teach myself how to code. I did not want to wait for my school to teach me, if I could do it myself.</p>
-                
-                <p>I challenged myself to teach myself the skills that I wanted to learn. I taught myself how to
-                make games on Scratch, make bots with Python, CAD printables, etc. By having the initiative and patience to teach myself 
-                the skills I wanted to know, I was able to let my
-                creativity spill, and work on projects that I wanted to work on. I learned that I did had the capability to teach myself
-                these new concepts, and how I could apply them to my daily life.</p>
-            </div>
+    <!--My Work-->
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title--work">My Work</h2>
+      <p class="section__subtitle section__subtitle--work">
+        My projects and contributions
+      </p>
 
-            <img src="img/smile.png" alt="a picture of Gavin" class="about-me__img">
-        </section>
+      <div class="portfolio">
+        <!--2702 Rapid React-->
+        <a href="rapid-react.html" class="portfolio__item">
+          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
+        </a>
 
-        <!--My Work-->
-        <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">My Work</h2>
-            <p class="section__subtitle section__subtitle--work">My projects and contributions</p>
+        <!--Light Switch-->
+        <a href="light-switch.html" class="portfolio__item">
+          <img src="img/light-switch.png" alt="" class="portfolio__img" />
+        </a>
 
-            <div class="portfolio">
+        <!--Lamp Bot-->
+        <a href="lamp-bot.html" class="portfolio__item">
+          <img src="img/lamp-bot.png" alt="" class="portfolio__img" />
+        </a>
 
-                <!--2702 Rapid React-->
-                <a href="rapid-react.html" class="portfolio__item">
-                    <img src="img/rapid-react.png" alt="" class="portfolio__img">
-                </a>
-                
-                <!--Light Switch-->
-                <a href="light-switch.html" class="portfolio__item">
-                    <img src="img/light-swith.png" alt="" class="portfolio__img">
-                </a>
-                
-                <!--Lamp Bot-->
-                <a href="lamp-bot.html" class="portfolio__item">
-                    <img src="img/lamp-bot.png" alt="" class="portfolio__img">
-                </a>
-                
-                <!--Quadratics Solver-->
-                <a href="quadratics.html" class="portfolio__item">
-                    <img src="img/quadratic.png" alt="" class="portfolio__img">
-                </a>
+        <!--Quadratics Solver-->
+        <a href="quadratics.html" class="portfolio__item">
+          <img src="img/quadratic.png" alt="" class="portfolio__img" />
+        </a>
 
-                <!--LED light changer-->
-                <a href="remote-led.html" class="portfolio__item">
-                    <img src="img/arduino-led.png" alt="" class="portfolio__img">
-                </a>
+        <!--LED light changer-->
+        <a href="remote-led.html" class="portfolio__item">
+          <img src="img/arduino-led.png" alt="" class="portfolio__img" />
+        </a>
 
-                <!--Arduino Motion Sensor-->
-                <a href="motion-sensor.html" class="portfolio__item">
-                    <img src="img/arduino-motion-sensor.png" alt="" class="portfolio__img">
-                </a>
+        <!--Arduino Motion Sensor-->
+        <a href="motion-sensor.html" class="portfolio__item">
+          <img
+            src="img/arduino-motion-sensor.png"
+            alt=""
+            class="portfolio__img"
+          />
+        </a>
 
-                <!--GuhBot-->
-                <a href="guhbot/index.html" class="portfolio__item">
-                    <img src="img/discord-bot.png" alt="" class="portfolio__img">
-                </a>
+        <!--GuhBot-->
+        <a href="guhbot/index.html" class="portfolio__item">
+          <img src="img/discord-bot.png" alt="" class="portfolio__img" />
+        </a>
 
-                <!--YouTube viewbot-->
-                <a href="youtube-viewbot.html" class="portfolio__item">
-                    <img src="img/youtube-py.png" alt="" class="portfolio__img">
-                </a>
+        <!--COVID Bypass-->
+        <a href="covid-19-bypass.html" class="portfolio__item">
+          <img src="img/covid-19.png" alt="" class="portfolio__img" />
 
-                <!--Typeracer Bot-->
-                <a href="covid-19-bypass.html" class="portfolio__item">
-                    <img src="img/covid-19.png" alt="" class="portfolio__img">
-                </a>
-            </div>
-        </section>
+          <!--YouTube viewbot-->
+          <a href="youtube-viewbot.html" class="portfolio__item">
+            <img src="img/youtube-py.png" alt="" class="portfolio__img" />
+          </a>
+        </a>
+      </div>
+    </section>
 
-        <!--Footer-->
-        <footer class="footer">
-            <a href="mailto:guhbean@outlook.com" class="footer__link">guhbean@outlook.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/GuhBean">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://stackoverflow.com/users/13495609/guhbean">
-                        <i class="fab fa-stack-overflow"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.youtube.com/channel/UCnBxk-HBG0jXScCYvieHLDA">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.instagram.com/guhbean/">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/GuhBean">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+    <!--Footer-->
+    <footer class="footer">
+      <a href="mailto:guhbean@outlook.com" class="footer__link"
+        >guhbean@outlook.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://github.com/GuhBean">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://stackoverflow.com/users/13495609/guhbean"
+          >
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.youtube.com/channel/UCnBxk-HBG0jXScCYvieHLDA"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://discord.gg/6bXhJjKG">
+            <i class="fab fa-discord"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.instagram.com/guhbean/"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com/GuhBean">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
 
-        <script src="js/index.js"></script>
-
-    </body>
+    <script src="js/index.js"></script>
+  </body>
 </html>
