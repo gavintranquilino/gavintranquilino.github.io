@@ -1,6 +1,6 @@
 # GuhBean e-Portfolio/Website
 
-Simply acts as my portfolio to display my achievements and such information. 
+My online portfolio to display all my projects and achievements. 
 
 ## Description
 
