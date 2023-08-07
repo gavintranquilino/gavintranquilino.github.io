@@ -1,4 +1,4 @@
-# GuhBean e-Portfolio/Website
+# Gavin's e-Portfolio/Website
 
 My online portfolio to display all my projects and achievements. 
 
