@@ -28,6 +28,8 @@
     --fs-h3: 1.25rem;   
     --fs-body: 1rem;
 
+    --border-rad: 10px;
+
     /* box shadow 0.25 right, 0.25 down 0.75 blur*/
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
           0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -139,6 +141,7 @@ h3 { font-size: var(--fs-h3); }
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
+    border-radius: var(--border-rad);
     padding: 0.25em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
@@ -410,6 +413,7 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .about-me__img {
+    border-radius: var(--border-rad);
     box-shadow: var(--bs);
 }
 
@@ -465,6 +469,8 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .portfolio__item {
+    margin: 20px;
+    border-radius: var(--border-rad);
     background-color: var(--clr-accent);
     overflow: hidden;
     position: relative;
