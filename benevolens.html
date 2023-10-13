@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Scale on small devices-->
+    <title>Psych Tracker</title>
+    <!--Tab title-->
+    <link rel="icon" href="img/smile-round.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!--Differences between browsers-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <!--Fontawesome for brand icons-->
+
+    <!-- Link Preview with Open Graph Markup -->
+    <meta property="og:url" content="https://gavintranquilino.com/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:title" content="Gavin's Online Portfolio" />
+    <meta
+      property="og:description"
+      content="Benevolens - A Python Discord Summer Code Jam 2023 Project"
+    />
+    <meta
+      property="og:image"
+      content="https://gavintranquilino.com/img/benevolens.png"
+    />
+
+    <!--Google Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
+
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
+
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Introduction-->
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        Python Code Jam 2023 <strong>Benevolens</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Secret Codes and Image Manipulation Tool
+      </p>
+      <img src="img/benevolens.png" alt="Steganography" class="intro__img" />
+    </section>
+
+    <div class="individual-item">
+      <h2>Python Discord Code Jam 2023</h2>
+      <p>
+        I participated in the Python Discord Code Jam, an annual event that
+        provides an opportunity for individuals to collaborate on coding
+        projects. A Code Jam is essentially a competition where participants are
+        grouped into teams and given a specific programming task and theme to
+        guide their project. They have a limited time frame, usually a little
+        over a week, to create the best possible project based on the given
+        theme and requirements.
+        <br /><br />
+        In the context of the Python Discord Code Jam, this event focuses on
+        fostering creativity, teamwork, and coding skills. It's a chance for
+        developers to work together to create innovative and exciting projects,
+        often with a specific focus or theme, as was the case with this year's
+        theme of "Secret Codes" and the use of image manipulation tools. Code
+        Jams are not only about competition but also a great opportunity for
+        learning, collaboration, and having fun with coding.
+      </p>
+      <br /><br />
+
+      <a href="img/benevolens2.png" target="_blank">
+        <img src="img/benevolens2.png" alt="our logo" />
+      </a>
+
+      <p>
+        To participate in the Python Discord Code Jam, I had to complete a
+        qualifier task. This task involved rearranging tiles in an image based
+        on specific rules. The goal was to ensure that the provided input
+        allowed for a valid rearrangement. I had to implement functions to check
+        if the tile size divided the image size without remainders and if the
+        provided ordering used each input tile exactly once. This qualifier task
+        tested my skills in image manipulation and validation logic and was a
+        prerequisite for participating in the Code Jam event.
+      </p>
+      <a
+        class="custom-link"
+        href="https://pythondiscord.notion.site/CJ-10-Qualifier-Brief-cde425ad420e4552ad82079627789d5d"
+        target="_blank"
+        title="Devpost Submission"
+      >
+        <i class="fab fa-github github-icon"></i>
+        <span>Qualifier Rules</span>
+      </a>
+      <br />
+      <a
+        class="custom-link"
+        href="https://github.com/gavintranquilino/code-jam-10-qualifier"
+        target="_blank"
+        title="Devpost Submission"
+      >
+        <i class="fas fa-code"></i>
+        <span>My Submission</span>
+      </a>
+      <br /><br />
+
+      <a href="img/benevolens3.png" target="_blank"
+        ><img src="img/benevolens3.png" alt="benevolens"
+      /></a>
+      <br /><br />
+
+      <h2>Our Project</h2>
+      <p>
+        Benevolens is an automatic secret code translation tool! It's main
+        functionality consists on passing an image with a secret code somewhere
+        on it, then benevolens will create a new image that contains the decoded
+        text.
+        <br />
+        The program uses Tesseract to read text from images using Optical
+        Character Recognition (OCR). Using steganography and text ciphers,
+        benevolens inputs physical images of handwritten text, and can decode it
+        according to some cipher. This text is generated by the tool itself.
+        <br />
+        Benevolens does have a Command-Line Interface (CLI) which makes the tool
+        quick and easy to use and set up. Hidden messages can be stored by hand
+        in handwritten notes, and quickly deciphered using the tool.
+      </p>
+
+      <h2>Optical Character Recognition</h2>
+      <p>
+        Benevolens inputs an image that contains some encoded (handwritten) text
+        and outputs and image with that section translated.
+        <br /><br />
+        Using a random (or generated) noise cipher image, or a seed, text is
+        read from an image and parsed using that cipher.
+      </p>
+
+      <h2>Initial Testing</h2>
+      <br />
+      <a href="img/benevolens4.png" target="_blank"
+        ><img src="img/benevolens4.png" alt="Psych Tracker Image"
+      /></a>
+      <br />
+      <a href="img/benevolens5.png" target="_blank"
+        ><img src="img/benevolens5.png" alt="Psych Tracker Image"
+      /></a>
+      <br />
+
+      <h2>Steganography (second feature)</h2>
+      <p>
+        Image steganography is a technique of hiding secret information or data
+        within an image without altering its visible appearance to the human
+        eye. In other words, it's a way to embed hidden messages or content
+        within an image so that it appears like a normal image to casual
+        observers. This can be achieved by subtly modifying the image's pixel
+        values or other data while preserving the image's overall visual
+        integrity. Image steganography is often used for secure communication
+        and data concealment.
+        <br /><br />
+        Using XOR images for steganography involves taking two original images,
+        performing a bitwise XOR operation between them to create a third image.
+        This third image serves as a hidden container. What's intriguing is that
+        you can XOR one of the original images with this container to reveal the
+        other original image. XOR's reversible property makes this possible;
+        XORing the same values twice cancels out the effect, offering a simple
+        yet reversible way to hide and retrieve one image within another.
+        However, it's important to note that this method is not a robust
+        encryption technique and is mainly used for educational or basic data
+        concealment purposes.
+      </p>
+      <br /><br />
+      <a href="img/benevolens6.png" target="_blank">
+        <img src="img/benevolens6.png" alt="XOR images" />
+      </a>
+      <p>
+        When you XOR (exclusive OR) two images, you perform a pixel-wise
+        operation between the corresponding pixels of the two images. XOR is a
+        bitwise operation that compares the binary representation of each pixel
+        in the two images. The result is a new image where each pixel is the
+        result of applying the XOR operation to the pixels of the original
+        images at the same position.
+        <br /><br />
+        The XOR operation is commonly used in steganography and other
+        applications to manipulate the binary data of images. It can be a way to
+        hide or reveal information within images, as it alters the pixel values
+        in a reversible manner.
+      </p>
+      <br /><br />
+
+      <h2>Initial Testing</h2>
+      <p>
+        (clearly needed some testing)
+        <br />
+        but you can try it out down below!
+      </p>
+      <br />
+
+      <a href="img/benevolens7.png" target="_blank"
+        ><img src="img/benevolens7.png" alt="initial xor"
+      /></a>
+      <br /><br />
+
+      <h2>Try it out!</h2>
+      <p>
+        *Information and getting started information already included in the
+        README.md file
+      </p>
+      <a
+        class="custom-link"
+        href="https://github.com/ransomw/the-benevolent-dictators"
+        target="_blank"
+        title="GitHub Repo"
+      >
+        <i class="fab fa-github github-icon"></i>
+        <span>GitHub Repo</span>
+      </a>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
