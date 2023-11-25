@@ -85,8 +85,13 @@ strong { font-weight: var(--fw-bold);}
 
 /* Buttons */
 
+.btn-container {
+    text-align: center;
+}
+
 .btn {
     display: inline-block;
+    margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
     padding: 0.5em 1.5em;
     background: var(--clr-primary-static);
     border-radius: 5px;
