@@ -1,0 +1,25 @@
+name: Update Resume PDF
+
+on:
+  repository_dispatch:
+    types: [pdf_update]
+
+jobs:
+  update_pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download PDF
+        run: |
+          curl -o latest.pdf https://raw.githubusercontent.com/gavintranquilino/gavins-resume/main/out/Gavin_Tranquilino.pdf
+
+      - name: Copy PDF to Website
+        run: |
+          cp latest.pdf Gavin_Tranquilino.pdf
+
+      - name: Commit and Push Changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
