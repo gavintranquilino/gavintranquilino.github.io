@@ -1,9 +1,8 @@
 name: Update Resume PDF
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [pdf_update]
 
 jobs:
   update_pdf:
