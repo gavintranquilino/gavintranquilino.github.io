@@ -20,6 +20,7 @@ jobs:
       - name: Commit changes
         run: |
           git clone https://github.com/gavintranquilino/gavintranquilino.github.io.git/
+          cd gavintranquilino.github.io
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add latest.pdf
