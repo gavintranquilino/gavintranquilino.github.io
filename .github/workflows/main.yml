@@ -17,9 +17,14 @@ jobs:
         run: |
           cp latest.pdf Gavin_Tranquilino.pdf
 
-      - name: Commit and Push Changes
-        uses: ad-m/github-push-action@v0.6.0
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add latest.pdf
+          git commit -m "Add latest.pdf"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          branch: main
-          force: true
