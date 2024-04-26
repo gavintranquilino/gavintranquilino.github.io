@@ -9,14 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Clone the repository
-      #   run: |
-      #     git clone https://github.com/gavintranquilino/gavintranquilino.github.io.git/
-      #     cd gavintranquilino.github.io
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     pwd .
-          
       - name: Download PDF
         run: |
           curl -o resume.pdf https://raw.githubusercontent.com/gavintranquilino/gavins-resume/main/out/Gavin_Tranquilino.pdf
@@ -24,10 +16,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add .
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"          
+          git add -A
           git commit -m "Update resume.pdf"
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          git push
