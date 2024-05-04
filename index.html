@@ -63,9 +63,9 @@
         <ul class="nav__list">
           <!--Dunder = subclass of nav-->
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item">
+          <!-- <li class="nav__item">
             <a href="#services" class="nav__link">What I Do</a>
-          </li>
+          </li> -->
           <li class="nav__item">
             <a href="#about" class="nav__link">About Me</a>
           </li>
@@ -83,96 +83,82 @@
         <!--Double Hyphen = Modifier class to mod section__title-->
         Hey, I'm <strong>Gavin</strong>
       </h1>
-      <p class="section__subtitle section__subtitle--intro">tinkerer / dev</p>
+      <p class="section__subtitle section__subtitle--intro">engineer / dev</p>
       <!-- <img src="img/smile.png" alt="a picture of Gavin" class="intro__img" /> -->
       <img src="img/smile.svg" alt="a picture of Gavin" class="intro__img" />
     </section>
 
-    <!--My Services-->
-    <section class="my-services" id="services">
+    <!-- My Services -->
+    <!-- <section class="my-services" id="services">
       <h2 class="section__title section__title--services">What I do</h2>
-      <!--Three Columns-->
       <div class="services">
         <div class="service">
-          <h3>Python Programming</h3>
+          <h3>Software</h3>
           <p>
-            Python is my main programming language. From scripting to local
-            webservers for home automation, I use Python on the regular. My
-            proficiency in Python has been mostly attributed to self-directed
-            learning, enough to compete in the 2023 Canada Computing Contest. I
-            have always had a thing for programming, especially as it makes
-            sense logically. I find satisfaction in being able to create a
-            program that runs reliably, and is scalable. Much of my digital
-            literacy and proficiency, and research skills I attribute to
-            programming as a whole. My favorite project with Python is
-            definitely my Discord bot for general purposes seen below.
+            <ul>
+              <li>Web Development</li>
+              <li>Mobile Development</li>
+              <li>Desktop Development</li>
+              <li>Game Development</li>
+              <li>Database Management</li>
+              <li>Machine Learning</li>
+              <li>IoT</li>
+              <li>Automation</li>
+            </ul>
           </p>
         </div>
-        <!--service-->
 
         <div class="service">
-          <h3>3D printing and CAD</h3>
+          <h3>Mechanical</h3>
           <p>
-            Software aside, I bought myself a 3d printer as a Christmas gift for
-            myself in 2022. <i>(Probably the best gift I've gotten)</i>. Since
-            then, I've been able to learn CAD software such as Fusion360 and
-            SolidWorks (contribution in FIRST Robotics Team 2702). I have used
-            3D printing to create characters, gifts, and stamps. One of my
-            dreams is to be proficient in creating, so that I can combine
-            mechanical and electronics design to create gadgets. I find it
-            satisfying whenever I can birth my ideas into the real world through
-            CAD design. Probably my favorite 3D printing project is my crude
-            home light switch automation. More on it below.
+            
           </p>
         </div>
-        <!--service-->
 
         <div class="service">
-          <h3>Arduino and Raspberry Pi</h3>
+          <h3>Electrical</h3>
           <p>
-            With an Arduino and a Raspberry Pi, I am able to create a bridge
-            between software and hardware. With a microcontroller such as the
-            Arduino UNO, I have created a motion sensor and custom LED light
-            control, using the Arduino programming langauge that is based off of
-            C++. While I am still exploring how to use this technology, I am
-            eager to explore the capabilites of this device. With my Raspberry
-            Pi, I am able to host my Discord bot, and create a cheap web server
-            for my other websites. I have explored the software of the Raspberry
-            Pi using the Raspberry Pi Operating System, which based on Debian
-            Linux. I was able to connect my desktop to my Raspberry Pi through
-            Secure Shell in order to upload files and start my webserver
-            wirelessly.
+            
           </p>
         </div>
-        <!--service-->
       </div>
-      <!--services-->
-
-      <a href="#work" class="btn">My Work</a>
-      <a href="resume.pdf" class="btn">Resumé</a>
-    </section>
+    </section> -->
 
     <!--About Me-->
     <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">More about me</h2>
+      <h2 class="section__title section__title--about">About me</h2>
       <p class="section__subtitle section__subtitle--about">
-        Mechatronics Engineering Student
+        a perpetual work in progress
       </p>
       <!--Use paragraph as subtitle, headers for new sections-->
 
       <div class="about-me__body">
         <p>
-          As a first-year Mechatronics student at the University of Waterloo,
-          I'm passionate about technology, with a particular focus on wireless
-          technologies, IoT, and Python programming. I've independently explored
-          and applied various skills, including 3D printing and CAD design. My
-          goal is to leverage these skills, along with my university education,
-          to create innovative solutions and contribute to the world of
-          technology and engineering.
+          As a mechatronics engineer from the
+          University of Waterloo, I work on
+          3D mechanical design, PCB design,
+          embedded programs, IoT,
+          robots, and all things nerd. I like to keep this
+          portfolio updated with various projects I work on. <br />
+          <br />
+          Honestly, I'm just a guy who likes to tinker with things and see how
+          they work. These skills and experiences are just a side effect of my
+          curiosity.
+          <br />
+          <br />
+          When someone asks for my hobbies, I usually say that I like to build
+          things. Check out what I have built and what I'm currently working on.
         </p>
+
+        
       </div>
 
       <img src="img/logo.png" alt="a picture of Gavin" class="about-me__img" />
+
+      <div class="about-me__btn">
+        <a href="#work" class="about-me--btn">My Work</a>
+        <a href="resume.pdf" class="about-me--btn" target="_blank">Resumé</a>
+      </div>
     </section>
 
     <!--My Work-->
@@ -183,7 +169,33 @@
       </p>
 
       <div class="portfolio">
-        <!--2702 Rapid React-->
+        
+        <!-- Sheartak Tools LTD.
+        <a href="rapid-react.html" class="portfolio__item">
+          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
+        </a>
+
+        <!--Ri3D-->
+        <!-- <a href="rapid-react.html" class="portfolio__item">
+          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
+        </a> -->
+
+        <!--Blink Twice if You Need Help-->
+        <!-- <a href="rapid-react.html" class="portfolio__item">
+          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
+        </a> -->
+
+        <!--mathemati.co-->
+        <!-- <a href="rapid-react.html" class="portfolio__item">
+          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
+        </a> -->
+
+        <!--self-balancing unicycle-->
+        <!-- <a href="rapid-react.html" class="portfolio__item">
+          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
+        </a> -->
+        
+        <!-- Rapid React -->
         <a href="rapid-react.html" class="portfolio__item">
           <img src="img/rapid-react.png" alt="" class="portfolio__img" />
         </a>

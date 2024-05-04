@@ -16,11 +16,11 @@
     --fw-bold: 900;
 
     /* Colour */
-    --clr-primary: #fff;
+    --clr-primary: #fffaed;
     --clr-secondary: #303030;
     --clr-accent: #ff7e5f;
 
-    --clr-primary-static: #fff;
+    --clr-primary-static: #fffaed;
     --clr-secondary-static: #303030;
 
     --fs-h1: 3rem; /* 1rem = 16px */
@@ -39,7 +39,7 @@
 /* Theme Toggle */
 body.dark-theme {
     --clr-primary: #262b2f;
-    --clr-secondary: #fff;
+    --clr-secondary: #fffaed;
     --clr-accent: #c14a09;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 3em 3em;
 }
 
 img {
@@ -420,6 +420,34 @@ h3 { font-size: var(--fs-h3); }
 .about-me__img {
     border-radius: var(--border-rad);
     box-shadow: var(--bs);
+}
+
+.about-me__btn {
+    position: relative;
+    text-align: center;
+}
+
+.about-me--btn {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
+    padding: 0.5em 1.5em;
+    background: var(--clr-secondary-static);
+    border-radius: 5px;
+    color: var(--clr-primary-static);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.about-me--btn:hover {
+    background-color: var(--clr-accent);
+    transform: scale(1.1);
+    outline: 3px solid var(--clr-secondary);
+    outline-offset: 3px;
 }
 
 @media (min-width: 600px) {
