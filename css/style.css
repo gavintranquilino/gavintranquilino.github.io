@@ -436,7 +436,7 @@ h3 { font-size: var(--fs-h3); }
     color: var(--clr-primary-static);
     text-decoration: none;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
