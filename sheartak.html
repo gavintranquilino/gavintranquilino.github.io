@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheartak Tools</title>
+    <link rel="icon" href="img/smile-round.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <meta property="og:url" content="https://gavintranquilino.com/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:title" content="Gavin's Online Portfolio" />
+    <meta
+      property="og:description"
+      content="Mechanical Engineering Associate at Sheartak Tools"
+    />
+    <meta
+      property="og:image"
+      content="https://gavintranquilino.com/img/sheartak/cutter-in-box.jpg"
+    />
+
+    <!--Google Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
+
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
+
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Introduction-->
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        <strong>Mechanical Engineering</strong> @ Sheartak Tools
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        i created woodworking machine upgrades
+      </p>
+      <img
+        src="img/sheartak/sheartak.png"
+        alt="Sheartak Logo"
+        class="intro__img"
+      />
+    </section>
+
+    <div class="individual-item">
+      <h2>Overview</h2>
+      <p><strong>I worked on...</strong></p>
+      <p>
+        Using SolidWorks to model custom spiral cutterhead upgrades for clients'
+        planers and jointers.
+      </p>
+      <p>Creating custom user manuals based on parts lists for each model.</p>
+      <p>
+        Making YouTube videos for tutorials and troubleshooting guides for
+        various machines using Premiere and Photoshop.
+      </p>
+      <p>
+        Automating the process of creating mockup images for products using
+        Photoshop actions.
+      </p>
+      <p>
+        An internal Python tool to help with stocking and keeping inventory in
+        the warehouse.
+      </p>
+      <br />
+
+      <h2>Mechanical Engineering</h2>
+      <p>
+        I worked on 15 customized woodworking cutterheads. Some are for wood
+        planers, some for jointers, and various spinning things with blades.
+      </p>
+      <p>
+        Unfortunately, I can't actually attach any of those models, but I have
+        some screenshots of final SolidWorks models of my parts.
+      </p>
+      <p>
+        I would measure or use existing measurements of clients' machines and
+        model the cutterhead upgrade for them.
+      </p>
+      <p>
+        I worked to provide accurate models for the manufacturing team to follow
+        and to prototype.
+      </p>
+
+      <img src="img/sheartak/enhanced-cutter.png" alt="enhanced cutterhead" />
+      <img src="img/sheartak/cutter-in-box.jpg" alt="cutter in box" />
+
+      <h2>YouTube Videos</h2>
+      <p>
+        I have just a couple of YouTube videos I have filmed, edited, and voiced
+        over.
+      </p>
+      <p>
+        I am really proud of these videos as they should hopefully guide anyone
+        looking to upgrade their machines with Sheartak.
+      </p>
+
+      <img src="img/sheartak/camera_setup.jpg" alt="camera_setup">
+      <img src="img/sheartak/camera-in-hand.jpg" alt="camera-in-hand">
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?si=Q9OkfA0uhOmYjByq&amp;list=PL2zKq55_kXLeLsMzZH8ny8A34vHwAoc7n"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <h3>Photoshop Actions</h3>
+      <p>I also tried optimizing the mockup image process.</p>
+      <p>
+        I really liked the Photoshop actions feature that allows set actions to
+        be recorded than replayed.
+      </p>
+      <p>
+        So, I created a set of actions to remove the background from any image
+        while maintaining a drop shadow on the object.
+      </p>
+      <p>
+        This saved hours of time editing images, and hopefully enough of a start
+        to automate further with Python.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/73rMPrH8_wM?si=3_fphkjf9kb_j1oa"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
