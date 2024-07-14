@@ -601,6 +601,11 @@ h3 { font-size: var(--fs-h3); }
     margin-top: 1em;
 }
 
+.individual-item h3 {
+    font-size: var(--fs-h3);
+    margin-top: 1em;
+}
+
 /* Custom Links */
 .custom-link {
     color: var(--clr-accent);

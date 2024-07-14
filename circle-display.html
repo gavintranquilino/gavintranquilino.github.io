@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>i love pandas</title>
+    <link rel="icon" href="img/smile-round.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <meta property="og:url" content="https://gavintranquilino.com/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:title" content="Gavin's Online Portfolio" />
+    <meta property="og:description" content="Panda on the Display" />
+    <meta
+      property="og:image"
+      content="https://gavintranquilino.com/img/circle-display/panda_circle.png"
+    />
+
+    <!--Google Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
+
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
+
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Introduction-->
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        Custom
+        <br />
+        Tamagotchi
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">work in progress</p>
+      <img
+        src="img/circle-display/kumi.gif"
+        alt="Closer up image"
+        class="intro__img"
+      />
+    </section>
+
+    <div class="individual-item">
+      <h2>The Goal</h2>
+      <p>
+        Make a portable handheld virtual pet that can support higher quality
+        images on a round display.
+      </p>
+      <p>
+        My current plan is to turn my stuffed animals into virtual pets I can
+        take around with me as if it were a Tamagotchi.
+      </p>
+      <p>
+        I am also a fan of the idea to introduce various sensors and an IMU to
+        increase possible interactions with my pets.
+      </p>
+      <p>
+        I think this is really cool to carry around as a wearable and fun to
+        showcase to others as well.
+      </p>
+
+      <h2>3D Models</h2>
+      <h3>Mobile Scanner</h3>
+      <p>
+        I think it's cool to be able to interact with actual 3D pets, so I
+        started with a scan of my panda stuffed animal.
+      </p>
+      <p>
+        I used <a href="https://poly.cam/" target="_blank">Polycam</a>, a
+        <a href="https://en.wikipedia.org/wiki/Photogrammetry" target="_blank"
+          >photogrammetry</a
+        >
+        3D scanner for mobile, to scan my panda Kumi.
+      </p>
+      <p>
+        Polycam gives iirc about 15 free scans, so this was just enough for my
+        purposes if I wanted to scan more.
+      </p>
+      <p>
+        My Pixel 6a does not support LiDAR like the iOS counterparts, so using
+        photogrammetry which is a method of using images and stitches them
+        together to create a 3D model of an object.
+      </p>
+      <p>
+        This is the same technology that Google uses for
+        <a href="https://www.youtube.com/watch?v=suo_aUTUpps" target="_blank"
+          >Google Earth</a
+        >.
+      </p>
+      <p>
+        Of course this comes with its limitations as it has trouble scanning
+        dark, shiny, or clear areas.
+      </p>
+      <p>
+        My solution to this was to ensure good lighting by having a lamp
+        overhead and just go around my desk for each scan.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZL2r2g9Ic80?si=XMe3BL3qLJTIctkD"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <h3></h3>
+
+      <h2>Round Display</h2>
+      <p>I wanted a circular display for my virtual pet.</p>
+      <p>It's like a little portal to view my pet.</p>
+      <p>
+        I opted for the
+        <a href="https://dronebotworkshop.com/gc9a01/">GC9A01</a> 1.28" TFT LCD
+        display module (240 x 240px)
+      </p>
+      <p>
+        I got this LCD since it's not power hungry, and also a small size good
+        enough for handheld.
+      </p>
+      <p>
+        For now, I got the display with the pin headers for debugging, but in
+        the future I am planning to get ones with either the JST connectors or
+        ribbon connectors.
+      </p>
+      <p>
+        I used the
+        <a href="https://github.com/bitbank2/AnimatedGIF">AnimatedGIF</a>
+        library to play GIFs from flash memory. I am planning to read GIFs from
+        storage like a microSD card in the future.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/gWcwKqVwEh4?si=3NyFOf1sR5x6y12_"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <h2>Current Goals</h2>
+      <p>
+        With the current configuration, I have an IMU setup, I am hoping to be
+        able to move the panda model freely as I rotate the device.
+      </p>
+      <p>
+        I also am looking at other image libraries such as LGVL for 2D stuff.
+      </p>
+      <p>
+        Another plan is using a rotary encoder around the display to be able to
+        interact with the circular nature of the screen.
+      </p>
+      <p>
+        A battery management system is also a concern, I do have various sizes
+        of LiPo batteries that I am able to tinker with, but I am going to try
+        to research on souces that use ESP32 for handheld devices as using this
+        as an assistant as well would be cool.
+      </p>
+      <p>Stay tuned for future updates to this project!</p>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
