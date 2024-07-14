@@ -593,6 +593,12 @@ h3 { font-size: var(--fs-h3); }
     /* To Keep top and bottom margins set to default */
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0.5em;
+}
+
+.individual-item h2 {
+    font-size: var(--fs-h2);
+    margin-top: 1em;
 }
 
 /* Custom Links */
