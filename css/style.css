@@ -584,7 +584,6 @@ h3 { font-size: var(--fs-h3); }
 
 .individual-item img:hover {
     cursor: pointer;
-    transform: scale(1.1);
 }
 
 .individual-item p {
