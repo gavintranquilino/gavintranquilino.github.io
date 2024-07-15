@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>*blink* *blink*</title>
+    <link rel="icon" href="img/smile-round.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <meta property="og:url" content="https://gavintranquilino.com/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:title" content="Gavin's Online Portfolio" />
+    <meta property="og:description" content="Blink Twice If You Need Help" />
+    <meta
+      property="og:image"
+      content="https://gavintranquilino.com/img/blink-twice-if-you-need-help/overview.png"
+    />
+
+    <!--Google Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
+
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">Change Theme?</span>
+      </button>
+
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Introduction-->
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        Blink Twice 👀 <br />
+        If You Need Help
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        DeltaHacks X 2024 Project
+      </p>
+      <img
+        src="img/blink-twice-if-you-need-help/closer-up.png"
+        alt="Closer up image"
+        class="intro__img"
+      />
+    </section>
+
+    <div class="individual-item">
+      <h2>The Demo</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jnIf4NE0WYI?si=TuOt1-v5sMWxwJKn"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <br />
+      <br />
+      <h2>Overview</h2>
+      <p>
+        I am getting too tired... we already covered what it's supposed to do.
+        Just check it down below.
+      </p>
+      <p>
+        Check out the
+        <a
+          href="https://devpost.com/software/blink-twice-if-you-need-help"
+          target="_blank"
+          >DevPost</a
+        >! and
+        <a
+          href="https://github.com/gavintranquilino/blink-twice-if-you-need-help"
+          target="_blank"
+          >GitHub</a
+        >!
+      </p>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

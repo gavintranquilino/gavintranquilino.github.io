@@ -52,4 +52,44 @@ themeToggle.addEventListener('click', () => {
 	document.body.classList.toggle('dark-theme');
 });
 
+// Slideshow STUFF
+// Query all unique slideshow classes
+let slideContainers = document.querySelectorAll('.slideshow-container');
+let slideIndex = Array(slideContainers.length).fill(1); // Initialize the slide index for each slideshow dynamically
+let slideId = [];
 
+slideContainers.forEach((container, index) => {
+  // Find slides within each container and add their class to the slideId array
+  let slides = container.querySelectorAll('[class^="slides"]');
+  if (slides.length > 0) {
+    slideId.push(slides[0].classList[0]); // Assuming all slides in a container share the same class
+  }
+});
+
+// Initialize all slideshows
+for (let i = 0; i < slideId.length; i++) {
+  showSlides(1, i);
+}
+
+showSlides(1, 2);
+
+// Arrow controls
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+// Dots controls
+function currentSlide(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
