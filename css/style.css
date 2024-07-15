@@ -649,7 +649,10 @@ h3 {
 }
 
 .slideshow-container img {
-    width: 100%;
+    max-height: 80vh;
+    max-width: 100%;
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     border-radius: var(--border-rad);
     padding: 0;
 }
