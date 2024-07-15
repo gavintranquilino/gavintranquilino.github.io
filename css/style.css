@@ -35,10 +35,16 @@
 }
 
 /* Theme Toggle */
-body.dark-theme {
+body.dark-theme{
   --clr-primary: #262b2f;
   --clr-secondary: #fffaed;
-  --clr-accent: #c14a09;
+  --clr-accent: #bb6639;
+}
+
+/* toggle all about-me--btn colors */
+body.dark-theme .about-me--btn {
+  background: var(--clr-accent);
+  color: var(--clr-secondary);
 }
 
 @media (min-width: 800px) {
