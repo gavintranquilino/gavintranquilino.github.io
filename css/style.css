@@ -38,7 +38,7 @@
 body.dark-theme{
   --clr-primary: #262b2f;
   --clr-secondary: #fffaed;
-  --clr-accent: #bb6639;
+  --clr-accent: #c14a09;
 }
 
 /* toggle all about-me--btn colors */
@@ -289,7 +289,7 @@ h3 {
   border: 0;
   border-radius: 5px;
   position: absolute;
-  right: 2em;
+  right: 1em;
   top: 3em;
   z-index: 100;
   transition: transform 200ms ease-in-out;

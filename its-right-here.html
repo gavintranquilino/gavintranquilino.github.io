@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT'S RIGHT HERE!!!</title>
+    <link rel="icon" href="img/smile-round.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <meta property="og:url" content="https://gavintranquilino.com/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:title" content="Gavin's Online Portfolio" />
+    <meta property="og:description" content="IT'S RIGHT HERE!!!" />
+    <meta
+      property="og:image"
+      content="https://gavintranquilino.com/img/its-right-here/logo.png"
+    />
+
+    <!--Google Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img src="img/logo.png" alt=""> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        <!--Styled up button-->
+      </button>
+
+      <button class="theme-toggle" aria-label="toggle theme">
+        <span class="sun-moon">
+          <i class="fas fa-cloud-sun"></i>
+        </span>
+      </button>
+
+      <button onclick="topFunction()" class="to-top">
+        <span class="up-arrow"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <!--Dunder = subclass of nav-->
+          <li class="nav__item">
+            <a href="index.html#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link">What I Do</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Introduction-->
+    <section class="intro" id="home">
+      <!--class for styling, id for anchoring-->
+      <h1 class="section__title section__title--intro">
+        <!--Double Hyphen = Modifier class to mod section__title-->
+        Find Me Arrow <br />
+        Key Holder
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        IT'S RIGHT HERE!!!
+      </p>
+      <img
+        src="img/its-right-here/logo.jpg"
+        alt="IT'S RIGHT HERE"
+        class="intro__img"
+      />
+    </section>
+
+    <div class="individual-item">
+    <h2>What is this?</h2>
+    <p>Lame norwegian friend was searching for a keychain for my "friend" poopwrld.</p>
+    <p>He was streaming his screen to the groupchat (Discord 🤢), and we found the funniest item on sale.</p>
+    <p>It was some random norwegian site for gag items??</p>
+    <p>I thought it was such a random red arrow meme idea that I NEEDED to recreate it.</p>
+    <p> I used Fusion360 to model the arrow. I used a combination of sweep along paths and fillets to recreate the arrow to my size liking.</p>
+
+    <!-- Website Slideshow -->
+    <div class="slideshow-container">
+    <div class="slides1 fade">
+        <a href="https://www.teknikmagasinet.no/produkter/gadgets-spill-party/gadgets/goy-tull-leker/find-me-arrow/" target="_blank">
+            <img src="img/its-right-here/norway-site.jpg" alt="norway site">
+        </a>
+        <div class="text">Norwegian Website</div>
+    </div>
+
+    <div class="slides1 fade">
+        <a href="img/its-right-here/fusion360.jpg" target="_blank">
+        <img src="img/its-right-here/fusion360.jpg" />
+        </a>
+        <div class="text">Modelling in Fusion360</div>
+    </div>
+
+    <div class="slides1 fade">
+        <a href="img/its-right-here/slicer.jpg" target="_blank">
+        <img src="img/its-right-here/slicer.jpg" />
+        </a>
+        <div class="text">Slicer Preview with Supports</div>
+    </div>
+    <br />
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+    <span class="dot" onclick="currentSlide(1, 0)"></span>
+    <span class="dot" onclick="currentSlide(2, 0)"></span>
+    <span class="dot" onclick="currentSlide(3, 0)"></span>
+    </div>
+        
+    <h2>3D Printing</h2>
+    <p>I have a Kingroon KP3S, and I have really liked its performance.</p>
+    <p>It has failed with the hotend at some points, but honestly it is such a reliable 3D printer.</p>
+    <p>I really like its size since it can fit on my shelves.</p>
+    <p>I got it sliced on Cura and I sent it off to print!</p>
+    <p>I added a brim to hold the rounded edges at the bottom, and tree supports to hold up that narrow part of the arrow.</p>
+
+    <!-- Website Slideshow -->
+    <div class="slideshow-container">
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing1.jpg" target="_blank">
+            <img src="img/its-right-here/printing1.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing2.jpg" target="_blank">
+            <img src="img/its-right-here/printing2.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing3.jpg" target="_blank">
+            <img src="img/its-right-here/printing3.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing4.jpg" target="_blank">
+            <img src="img/its-right-here/printing4.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing5.jpg" target="_blank">
+            <img src="img/its-right-here/printing5.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing6.jpg" target="_blank">
+            <img src="img/its-right-here/printing6.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+    <div class="slides2 fade">
+        <a href="img/its-right-here/printing7.jpg" target="_blank">
+            <img src="img/its-right-here/printing7.jpg" alt="norway site">
+        </a>
+        <div class="text">3D Printing</div>
+    </div>
+
+    <br />
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+    <span class="dot" onclick="currentSlide(1, 1)"></span>
+    <span class="dot" onclick="currentSlide(2, 1)"></span>
+    <span class="dot" onclick="currentSlide(3, 1)"></span>
+    </div>
+
+    <h2>Painting</h2>
+    <p>I used some of my sister's acrylic paint to fully paint it red.</p>
+    <p>I don't actually own any red filament, so painting it matte was my only option.</p>
+    <p>Honestly it turned out really well and resembled exactly how it was in the pictures from the norwegian site.</p>
+
+    <!-- Website Slideshow -->
+    <div class="slideshow-container">
+    <div class="slides3 fade">
+        <a href="img/its-right-here/painting.jpg" target="_blank">
+        <img src="img/its-right-here/painting.jpg" />
+        </a>
+        <div class="text">Painting</div>
+    </div>
+    <div class="slides3 fade">
+        <a href="img/its-right-here/painting2.jpg" target="_blank">
+        <img src="img/its-right-here/painting2.jpg" />
+        </a>
+        <div class="text">Painting</div>
+    </div>
+    <br />
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+    <span class="dot" onclick="currentSlide(1, 2)"></span>
+    <span class="dot" onclick="currentSlide(2, 2)"></span>
+    <span class="dot" onclick="currentSlide(3, 2)"></span>
+    </div>
+
+    <h2>Final Product</h2>
+    <p>It turned out really well and I was really happy with the final product.</p>
+    <p>It was a really fun project to work on and I'm glad I was able to recreate it.</p>
+    <p>It was a really random idea, but I'm glad I was able to bring it to life.</p>
+
+        <!-- Website Slideshow -->
+    <div class="slideshow-container">
+    <div class="slides4 fade">
+        <a href="img/its-right-here/iphone1.jpg" target="_blank">
+        <img src="img/its-right-here/iphone1.jpg" />
+        </a>
+        <div class="text">Painting</div>
+    </div>
+    <div class="slides4 fade">
+        <a href="img/its-right-here/iphone2.jpg" target="_blank">
+        <img src="img/its-right-here/iphone2.jpg" />
+        </a>
+        <div class="text">Painting</div>
+    </div>
+    <br />
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+    <span class="dot" onclick="currentSlide(1, 3)"></span>
+    <span class="dot" onclick="currentSlide(2, 3)"></span>
+    <span class="dot" onclick="currentSlide(3, 3)"></span>
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>3D printing is mega awesome and great for making this stuff.</p>
+    <p>I am also a god at 3D modelling.</p>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
