@@ -1,312 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Scale on small devices-->
-    <title>Gavin's Portfolio</title>
-    <!--Tab title-->
-    <link rel="icon" href="img/smile-round.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <!--Differences between browsers-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
-    <!--Fontawesome for brand icons-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Scale on small devices-->
+        <title>Gavin's Portfolio</title>
+        <!--Tab title-->
+        <link rel="icon" href="img/smile-round.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <!--Differences between browsers-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+        <!--Fontawesome for brand icons-->
 
-    <!-- Link Preview with Open Graph Markup -->
-    <meta property="og:url" content="https://gavintranquilino.com/" />
-    <meta property="og:type" content="portfolio" />
-    <meta property="og:title" content="Gavin's Online Portfolio" />
-    <meta
-      property="og:description"
-      content="Homepage for the online portfolio. Made with HTML, CSS, and JavaScript."
-    />
-    <meta
-      property="og:image"
-      content="https://gavintranquilino.com/img/smile.png"
-    />
+        <!-- Link Preview with Open Graph Markup -->
+        <meta property="og:url" content="https://gavintranquilino.com/" />
+        <meta property="og:type" content="portfolio" />
+        <meta property="og:title" content="Gavin's Online Portfolio" />
+        <meta
+            property="og:description"
+            content="Homepage for the online portfolio. Made with HTML, CSS, and JavaScript."
+        />
+        <meta
+            property="og:image"
+            content="https://gavintranquilino.com/img/smile.png"
+        />
 
-    <!--Google Fonts-->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-    />
+        <!--Google Fonts-->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Nav-Bar Placeholder -->
-    <header>
-      <div class="logo">
-        <!-- <img src="img/logo.png" alt=""> -->
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-        <!--Styled up button-->
-      </button>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Nav-Bar Placeholder -->
+        <header>
+            <div class="logo">
+                <!-- <img src="img/logo.png" alt=""> -->
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+                <!--Styled up button-->
+            </button>
 
-      <button class="theme-toggle" aria-label="toggle theme">
-        <span class="sun-moon">
-          <i class="fas fa-cloud-sun"></i>
-        </span>
-      </button>
+            <button class="theme-toggle" aria-label="toggle theme">
+                <span class="sun-moon">
+                    <i class="fas fa-cloud-sun"></i>
+                </span>
+            </button>
 
-      <button onclick="topFunction()" class="to-top">
-        <span class="up-arrow"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <!--Dunder = subclass of nav-->
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <!-- <li class="nav__item">
+            <button onclick="topFunction()" class="to-top">
+                <span class="up-arrow"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--Dunder = subclass of nav-->
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <!-- <li class="nav__item">
             <a href="#services" class="nav__link">What I Do</a>
           </li> -->
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About Me</a>
-          </li>
-          <li class="nav__item">
-            <a href="#work" class="nav__link">My Work</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About Me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">My Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <!--Introduction-->
-    <section class="intro" id="home">
-      <!--class for styling, id for anchoring-->
-      <h1 class="section__title section__title--intro">
-        <!--Double Hyphen = Modifier class to mod section__title-->
-        Hey, I'm <strong>Gavin</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">engineer / dev</p>
-      <!-- <img src="img/smile.png" alt="a picture of Gavin" class="intro__img" /> -->
-      <img src="img/smile.svg" alt="a picture of Gavin" class="intro__img" />
-    </section>
+        <!--Introduction-->
+        <section class="intro" id="home">
+            <!--class for styling, id for anchoring-->
+            <h1 class="section__title section__title--intro">
+                <!--Double Hyphen = Modifier class to mod section__title-->
+                Hey, I'm <strong>Gavin</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">
+                engineer / dev
+            </p>
+            <!-- <img src="img/smile.png" alt="a picture of Gavin" class="intro__img" /> -->
+            <img
+                src="img/smile.svg"
+                alt="a picture of Gavin"
+                class="intro__img"
+            />
+        </section>
 
-    <!--About Me-->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">About me</h2>
-      <p class="section__subtitle section__subtitle--about">
-        a perpetual work in progress
-      </p>
-      <!--Use paragraph as subtitle, headers for new sections-->
+        <!--About Me-->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">About me</h2>
+            <p class="section__subtitle section__subtitle--about">
+                a perpetual work in progress
+            </p>
+            <!--Use paragraph as subtitle, headers for new sections-->
 
-      <div class="about-me__body">
-        <p>
-          As a mechatronics engineer from the University of Waterloo, I work on
-          3D mechanical design, PCB design, embedded programs, IoT, robots, and
-          all things nerd. I like to keep this portfolio updated with various
-          projects I work on. <br />
-          <br />
-          Honestly, I'm just a guy who likes to tinker with things and see how
-          they work. These skills and experiences are just a side effect of my
-          curiosity. When someone asks for my hobbies, I usually say that I like
-          to build things.
-          <br />
-          <br />
-          Also, I have a YouTube channel where I post videos about projects and
-          things I have tinkered with that are not on this site. It contains
-          snippets of small projects that just aren't worth making dedicated
-          pages for. Go check it out below!
-          <br />
-          <br />
-          <em>Quick Note:</em> My YouTube channel and Resumé are honestly
-          probably more up to date than this site depending on when you're
-          viewing this.
-        </p>
-      </div>
+            <div class="about-me__body">
+                <p>
+                    As a mechatronics engineer from the University of Waterloo,
+                    I work on 3D mechanical design, PCB design, embedded
+                    programs, IoT, robots, and all things nerd. I like to keep
+                    this portfolio updated with various projects I work on.
+                    <br />
+                    <br />
+                    Honestly, I'm just a guy who likes to tinker with things and
+                    see how they work. These skills and experiences are just a
+                    side effect of my curiosity. When someone asks for my
+                    hobbies, I usually say that I like to build things.
+                    <br />
+                    <br />
+                    Also, I have a YouTube channel where I post videos about
+                    projects and things I have tinkered with that are not on
+                    this site. It contains snippets of small projects that just
+                    aren't worth making dedicated pages for. Go check it out
+                    below!
+                    <br />
+                    <br />
+                    <em>Quick Note:</em> My YouTube channel and Resumé are
+                    honestly probably more up to date than this site depending
+                    on when you're viewing this.
+                </p>
+            </div>
 
-      <img src="img/logo.png" alt="a picture of Gavin" class="about-me__img" />
+            <img
+                src="img/logo.png"
+                alt="a picture of Gavin"
+                class="about-me__img"
+            />
 
-      <div class="about-me__btn">
-        <a href="resume.pdf" class="about-me--btn" target="_blank">Resumé</a>
-        <a href="#work" class="about-me--btn">My Work</a>
-        <a
-          href="https://www.youtube.com/@gavintranquilino"
-          class="about-me--btn"
-          target="_blank"
-          >YouTube</a
-        >
-      </div>
-    </section>
+            <div class="about-me__btn">
+                <a href="resume.pdf" class="about-me--btn" target="_blank"
+                    >Resumé</a
+                >
+                <a href="#work" class="about-me--btn">My Work</a>
+                <a
+                    href="https://www.youtube.com/@gavintranquilino"
+                    class="about-me--btn"
+                    target="_blank"
+                    >YouTube</a
+                >
+            </div>
+        </section>
 
-    <!--My Work-->
-    <section class="my-work" id="work">
-      <h2 class="section__title section__title--work">My Work</h2>
-      <p class="section__subtitle section__subtitle--work">
-        My projects and contributions
-      </p>
+        <!--My Work-->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">
+                My projects and contributions
+            </p>
 
-      <div class="portfolio">
-        <!-- Sheartak Tools LTD. -->
-        <a href="sheartak.html" class="portfolio__item">
-          <img
-            src="img/sheartak/enhanced-cutter.png"
-            alt=""
-            class="portfolio__img"
-          />
-        </a>
+            <div class="portfolio">
+                <!-- Sheartak Tools LTD. -->
+                <a href="sheartak.html" class="portfolio__item">
+                    <img
+                        src="img/sheartak/enhanced-cutter.png"
+                        alt="enhanced-cutter"
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--Ri3D-->
-        <a href="ri3d-crescendo.html" class="portfolio__item">
-          <img
-            src="img/ri3d-crescendo/ri3d-crescendo.jpg"
-            alt=""
-            class="portfolio__img"
-          />
-        </a>
+                <!--Ri3D-->
+                <a href="ri3d-crescendo.html" class="portfolio__item">
+                    <img
+                        src="img/ri3d-crescendo/ri3d-crescendo.jpg"
+                        alt="Ri3D"
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--Dishwasher Things-->
-        <!-- <a href="rapid-react.html" class="portfolio__item">
+                <!--Dishwasher Magnets-->
+                <a href="dishwasher-magnets.html" class="portfolio__item">
+                    <img
+                        src="img/dishwasher-magnets/logo.png"
+                        alt="Dishwasher Magnets"
+                        class="portfolio__img"
+                    />
+                </a>
+
+                <!--Blink Twice if You Need Help-->
+                <a
+                    href="blink-twice-if-you-need-help.html"
+                    class="portfolio__item"
+                >
+                    <img
+                        src="img/blink-twice-if-you-need-help/overview.png"
+                        alt="overview"
+                        class="portfolio__img"
+                    />
+                </a>
+
+                <!-- Calendar Compare -->
+                <a href="calendar-compare.html" class="portfolio__item">
+                    <img
+                        src="img/calendar-compare/stage_square.jpg"
+                        alt="overview"
+                        class="portfolio__img"
+                    />
+                </a>
+
+                <!--mathemati.co-->
+                <a href="mathematico.html" class="portfolio__item">
+                    <img
+                        src="img/mathematico/hand-landmarks.png"
+                        alt="hand-landmarks"
+                        class="portfolio__img"
+                    />
+                </a>
+
+                <!--self-balancing unicycle-->
+                <!-- <a href="rapid-react.html" class="portfolio__item">
           <img src="img/rapid-react.png" alt="" class="portfolio__img" />
         </a> -->
 
-        <!--Blink Twice if You Need Help-->
-        <a href="blink-twice-if-you-need-help.html" class="portfolio__item">
-          <img
-            src="img/blink-twice-if-you-need-help/overview.png"
-            alt="overview"
-            class="portfolio__img"
-          />
-        </a>
-
-        <!-- Calendar Compare -->
-        <a href="calendar-compare.html" class="portfolio__item">
-          <img
-            src="img/calendar-compare/stage_square.jpg"
-            alt="overview"
-            class="portfolio__img"
-          />
-        </a>
-
-        <!--mathemati.co-->
-        <a href="mathematico.html" class="portfolio__item">
-          <img
-            src="img/mathematico/hand-landmarks.png"
-            alt="hand-landmarks"
-            class="portfolio__img"
-          />
-        </a>
-
-        <!--self-balancing unicycle-->
-        <!-- <a href="rapid-react.html" class="portfolio__item">
+                <!--pom lighter-->
+                <!-- <a href="rapid-react.html" class="portfolio__item">
           <img src="img/rapid-react.png" alt="" class="portfolio__img" />
         </a> -->
 
-        <!--pom lighter-->
-        <!-- <a href="rapid-react.html" class="portfolio__item">
-          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
-        </a> -->
+                <!-- Trying C++ For the first time -->
+                <a href="trying-cpp.html" class="portfolio__item">
+                    <img
+                        src="img/trying-cpp/double-bicep-based.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Trying C++ For the first time -->
-        <a href="trying-cpp.html" class="portfolio__item">
-          <img
-            src="img/trying-cpp/double-bicep-based.png"
-            alt=""
-            class="portfolio__img"
-          />
-        </a>
+                <!-- Rapid React -->
+                <a href="rapid-react.html" class="portfolio__item">
+                    <img
+                        src="img/rapid-react.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Rapid React -->
-        <a href="rapid-react.html" class="portfolio__item">
-          <img src="img/rapid-react.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Skills Ontario -->
+                <a href="hockey-robot.html" class="portfolio__item">
+                    <img
+                        src="img/hockey-robot.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Skills Ontario -->
-        <a href="hockey-robot.html" class="portfolio__item">
-          <img src="img/hockey-robot.png" alt="" class="portfolio__img" />
-        </a>
+                <!--Light Switch-->
+                <a href="light-switch.html" class="portfolio__item">
+                    <img
+                        src="img/light-switch.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--Light Switch-->
-        <a href="light-switch.html" class="portfolio__item">
-          <img src="img/light-switch.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Psych Tracker -->
+                <a href="psych-tracker.html" class="portfolio__item">
+                    <img
+                        src="img/psych-tracker.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Psych Tracker -->
-        <a href="psych-tracker.html" class="portfolio__item">
-          <img src="img/psych-tracker.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Circle Display -->
+                <a href="circle-display.html" class="portfolio__item">
+                    <img
+                        src="img/circle-display/panda_square.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Circle Display -->
-        <a href="circle-display.html" class="portfolio__item">
-          <img
-            src="img/circle-display/panda_square.png"
-            alt=""
-            class="portfolio__img"
-          />
-        </a>
+                <!-- Benevolens -->
+                <a href="benevolens.html" class="portfolio__item">
+                    <img
+                        src="img/benevolens.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Benevolens -->
-        <a href="benevolens.html" class="portfolio__item">
-          <img src="img/benevolens.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Cravin' Vinyls -->
+                <a href="cravinvinyls.html" class="portfolio__item">
+                    <img
+                        src="img/cravinvinyls.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Cravin' Vinyls -->
-        <a href="cravinvinyls.html" class="portfolio__item">
-          <img src="img/cravinvinyls.png" alt="" class="portfolio__img" />
-        </a>
+                <!--Lamp Bot-->
+                <a href="lamp-bot.html" class="portfolio__item">
+                    <img src="img/lamp-bot.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!--Lamp Bot-->
-        <a href="lamp-bot.html" class="portfolio__item">
-          <img src="img/lamp-bot.png" alt="" class="portfolio__img" />
-        </a>
+                <!-- Gutter Mount -->
+                <a href="gutter.html" class="portfolio__item">
+                    <img
+                        src="img/gutter/final1.jpg"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!-- Gutter Mount -->
-        <a href="gutter.html" class="portfolio__item">
-          <img src="img/gutter/final1.jpg" alt="" class="portfolio__img">
-        </a>
+                <!--it's right here-->
+                <a href="its-right-here.html" class="portfolio__item">
+                    <img
+                        src="img/its-right-here/logo.jpg"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--it's right here-->
-        <a href="its-right-here.html" class="portfolio__item">
-          <img src="img/its-right-here/logo.jpg" alt="" class="portfolio__img" />
-        </a>
+                <!--Quadratics Solver-->
+                <a href="quadratics.html" class="portfolio__item">
+                    <img
+                        src="img/quadratic.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--Quadratics Solver-->
-        <a href="quadratics.html" class="portfolio__item">
-          <img src="img/quadratic.png" alt="" class="portfolio__img" />
-        </a>
+                <!--LED light changer-->
+                <a href="remote-led.html" class="portfolio__item">
+                    <img
+                        src="img/arduino-led.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--LED light changer-->
-        <a href="remote-led.html" class="portfolio__item">
-          <img src="img/arduino-led.png" alt="" class="portfolio__img" />
-        </a>
+                <!--Arduino Motion Sensor-->
+                <a href="motion-sensor.html" class="portfolio__item">
+                    <img
+                        src="img/arduino-motion-sensor.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--Arduino Motion Sensor-->
-        <a href="motion-sensor.html" class="portfolio__item">
-          <img
-            src="img/arduino-motion-sensor.png"
-            alt=""
-            class="portfolio__img"
-          />
-        </a>
+                <!--GuhBot-->
+                <a href="guhbot/index.html" class="portfolio__item">
+                    <img
+                        src="img/discord-bot.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-        <!--GuhBot-->
-        <a href="guhbot/index.html" class="portfolio__item">
-          <img src="img/discord-bot.png" alt="" class="portfolio__img" />
-        </a>
+                <!--COVID Bypass-->
+                <a href="covid-19-bypass.html" class="portfolio__item">
+                    <img src="img/covid-19.png" alt="" class="portfolio__img" />
+                </a>
 
-        <!--COVID Bypass-->
-        <a href="covid-19-bypass.html" class="portfolio__item">
-          <img src="img/covid-19.png" alt="" class="portfolio__img" />
+                <!--YouTube viewbot-->
+                <a href="youtube-viewbot.html" class="portfolio__item">
+                    <img
+                        src="img/youtube-py.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a>
 
-          <!--YouTube viewbot-->
-          <a href="youtube-viewbot.html" class="portfolio__item">
-            <img src="img/youtube-py.png" alt="" class="portfolio__img" />
-          </a>
-        </a>
-      </div>
-    </section>
+                <!--Hitomezashi Stitching-->
+                <!-- <a href="youtube-viewbot.html" class="portfolio__item">
+                    <img
+                        src="img/youtube-py.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a> -->
 
-    <!--Footer Placeholder-->
-    <div id="footer-placeholder"></div>
+                <!--CNC Controller Wood-->
+                <!-- <a href="youtube-viewbot.html" class="portfolio__item">
+                    <img
+                        src="img/youtube-py.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a> -->
 
-    <script src="js/index.js"></script>
-  </body>
+                <!--CO2 Car-->
+                <!-- <a href="youtube-viewbot.html" class="portfolio__item">
+                    <img
+                        src="img/youtube-py.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a> -->
+
+                <!--Birdhouse-->
+                <!-- <a href="youtube-viewbot.html" class="portfolio__item">
+                    <img
+                        src="img/youtube-py.png"
+                        alt=""
+                        class="portfolio__img"
+                    />
+                </a> -->
+            </div>
+        </section>
+
+        <!--Footer Placeholder-->
+        <div id="footer-placeholder"></div>
+
+        <script src="js/index.js"></script>
+    </body>
 </html>
