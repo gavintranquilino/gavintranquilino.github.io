@@ -1,132 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>*blink* *blink*</title>
-    <link rel="icon" href="img/smile-round.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
-    <meta property="og:url" content="https://gavintranquilino.com/" />
-    <meta property="og:type" content="portfolio" />
-    <meta property="og:title" content="Gavin's Online Portfolio" />
-    <meta property="og:description" content="Blink Twice If You Need Help" />
-    <meta
-      property="og:image"
-      content="https://gavintranquilino.com/img/blink-twice-if-you-need-help/overview.png"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>*blink* *blink*</title>
+        <link rel="icon" href="img/smile-round.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+        <meta property="og:url" content="https://gavintranquilino.com/" />
+        <meta property="og:type" content="portfolio" />
+        <meta property="og:title" content="Gavin's Online Portfolio" />
+        <meta
+            property="og:description"
+            content="Blink Twice If You Need Help"
+        />
+        <meta
+            property="og:image"
+            content="https://gavintranquilino.com/img/blink-twice-if-you-need-help/overview.png"
+        />
 
-    <!--Google Fonts-->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-    />
+        <!--Google Fonts-->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <!-- <img src="img/logo.png" alt=""> -->
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-        <!--Styled up button-->
-      </button>
+    <body>
+        <header>
+            <div class="logo">
+                <!-- <img src="img/logo.png" alt=""> -->
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+                <!--Styled up button-->
+            </button>
 
-      <button class="theme-toggle" aria-label="toggle theme">
-        <span class="sun-moon">
-          <i class="fas fa-cloud-sun"></i>
-        </span>
-      </button>
+            <button class="theme-toggle" aria-label="toggle theme">
+                <span class="sun-moon">
+                    <i class="fas fa-cloud-sun"></i>
+                </span>
+            </button>
 
-      <button onclick="topFunction()" class="to-top">
-        <span class="up-arrow"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <!--Dunder = subclass of nav-->
-          <li class="nav__item">
-            <a href="index.html#home" class="nav__link">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#services" class="nav__link">What I Do</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#about" class="nav__link">About Me</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#work" class="nav__link">My Work</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+            <button onclick="topFunction()" class="to-top">
+                <span class="up-arrow"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <!--Dunder = subclass of nav-->
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#services" class="nav__link"
+                            >What I Do</a
+                        >
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link"
+                            >About Me</a
+                        >
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#work" class="nav__link">My Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <!--Introduction-->
-    <section class="intro" id="home">
-      <!--class for styling, id for anchoring-->
-      <h1 class="section__title section__title--intro">
-        <!--Double Hyphen = Modifier class to mod section__title-->
-        Blink Twice 👀 <br />
-        If You Need Help
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">
-        DeltaHacks X 2024 Project
-      </p>
-      <img
-        src="img/blink-twice-if-you-need-help/closer-up.png"
-        alt="Closer up image"
-        class="intro__img"
-      />
-    </section>
+        <!--Introduction-->
+        <section class="intro" id="home">
+            <!--class for styling, id for anchoring-->
+            <h1 class="section__title section__title--intro">
+                <!--Double Hyphen = Modifier class to mod section__title-->
+                Blink Twice 👀 <br />
+                If You Need Help
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">
+                DeltaHacks X 2024 Project
+            </p>
+            <img
+                src="img/blink-twice-if-you-need-help/closer-up.png"
+                alt="Closer up image"
+                class="intro__img"
+            />
+        </section>
 
-    <div class="individual-item">
-      <h2>The Demo</h2>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/jnIf4NE0WYI?si=TuOt1-v5sMWxwJKn"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+        <div class="individual-item">
+            <h2>Full Project Demo</h2>
+            <div class="iframe-container landscape">
+                <iframe
+                    src="https://www.youtube.com/embed/jnIf4NE0WYI?si=TuOt1-v5sMWxwJKn"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+            </div>
 
-      <br />
-      <br />
-      <h2>Overview</h2>
-      <p>
-        I am getting too tired... we already covered what it's supposed to do.
-        Just check it down below.
-      </p>
-      <p>
-        Check out the
-        <a
-          href="https://devpost.com/software/blink-twice-if-you-need-help"
-          target="_blank"
-          >DevPost</a
-        >! and
-        <a
-          href="https://github.com/gavintranquilino/blink-twice-if-you-need-help"
-          target="_blank"
-          >GitHub</a
-        >!
-      </p>
-    </div>
+            <h2>Overview</h2>
+            <p>
+                Blink Twice if You Need Help is a wearable computer vision
+                enabled device.
+            </p>
+            <p>
+                The premise is simple, if you were in a hostage situation where
+                calling 911 on your phone is too risky, you could use a blink
+                detection system to call for help.
+            </p>
+            <p>
+                The idea started off as a joke. I've seen TikToks where people
+                made the wildest videos and in the comments, they ask if they
+                were forced to make the lame video and if they could blink twice
+                if they need help.
+            </p>
+            <p>So I thought, what if I could make this real?</p>
 
-    <!-- Footer Placeholder -->
-    <div id="footer-placeholder"></div>
+            <h2>Blink Detection (OpenCV)</h2>
+            <p>This was my contribution to the hack.</p>
+            <p>
+                I have never used OpenCV before, but I did understand that there
+                are open-sourced facial landmark models out there.
+            </p>
+            <p>
+                It was clear to me that Mediapipe had functionality, but I
+                literally only needed blinking detection.
+            </p>
+            <p>
+                I ended up finding a
+                <a
+                    href="https://github.com/infoaryan/Eye-blink-detection-game"
+                    ,
+                    target="_blank"
+                    >cascade classifier</a
+                >
+                for the eyes online, and I ended up using that in the project.
+            </p>
+            <p>
+                The usage was simple, while the camera data is read, if the eyes
+                are closed based on the facial landmarks, call Adam's part of
+                the code where it will call "911".
+            </p>
+            <p>
+                This needed a lot of tweaking most importantly in timing as to
+                when to count a double-blink or not.
+            </p>
+            <p>
+                The most challenging part of the code was understanding how to
+                use the model for blink detection, but also how to calibrate for
+                double blinks.
+            </p>
+            <p>
+                Interfacing with Adam's calling functions was as simple as
+                calling his part of the code.
+            </p>
+            <p>
+                I really enjoyed coding this part as it was really impressive
+                and rewarding to get it to really count double blinks.
+            </p>
+            <div class="slideshow-container">
+                <div class="slides1 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/blink-detection.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/blink-detection.jpg"
+                        />
+                    </a>
+                    <div class="text">Me Testing Blink Detection</div>
+                </div>
 
-    <script src="js/index.js"></script>
-  </body>
+                <div class="slides1 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/blink-detection2.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/blink-detection2.jpg"
+                        />
+                    </a>
+                    <div class="text">Adam Blinks</div>
+                </div>
+
+                <div class="slides1 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/blink-detection3.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/blink-detection3.jpg"
+                        />
+                    </a>
+                    <div class="text">Adam Doesn't Blink</div>
+                </div>
+                <br />
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+
+            <h2>Hardware</h2>
+            <p>
+                The final project consisted of Adam's Logitech USB webcam, boba
+                straws for support, painters tape, a clip-on ring light, and
+                some random cardboard from Adam's dorm.
+            </p>
+            <p>
+                Beforehand we knew we would at the very least need a webcam and
+                some hat to hold the webcam. We ended up using a ring light to
+                help with the lighting since blinks are better detected with the
+                eyes well lit.
+            </p>
+            <p>
+                The main problem was that the field of view of the webcam forced
+                us to making the webcam further from the face.
+            </p>
+            <p>
+                As the weight of the webcam was moved further from the face,
+                more structure had to be built to keep it level.
+            </p>
+            <p>
+                Since we did not have materials, we can back to Adam's dorm to
+                get some cardboard and tape, but also used the boba straws from
+                the handouts at DeltaHacks. (It tasted great btw)
+            </p>
+            <p>
+                After lots and lots of tape, some adjusting of the hat, and
+                impeccable posture on my end, we ended up with this monstrosity.
+            </p>
+            <p>It may not be the most elegant, but it gets the point across.</p>
+            <p>
+                If I could make this a real product, I would set a camera at the
+                eyes instead of the whole face to account for the field of view
+                of the camera.
+            </p>
+            <h3>Some pics of the wearable</h3>
+            <div class="slideshow-container">
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware1.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware1.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware2.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware2.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware3.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware4.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware5.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware5.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware6.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware6.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware7.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware7.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware8.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware8.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware9.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware9.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware10.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware10.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware11.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware11.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="slides2 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/hardware12.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/hardware12.jpg"
+                        />
+                    </a>
+                </div>
+
+                <br />
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+
+            <h2>Calling "911" (Twilio)</h2>
+            <p>
+                Adam's part of the project was to call "911" if the blink
+                detection system was triggered.
+            </p>
+            <p>
+                He set up a Twilio account and used some libraries to get the
+                user's IP to send through text to speech the location of the
+                hat.
+            </p>
+            <p>
+                This was completely his role and integration with the blink
+                detection was as simple as calling his script that he wrote.
+            </p>
+            <p>
+                Read his side of the project
+                <a
+                    href="https://steep-motorcycle-b2c.notion.site/Blink-Twice-if-you-Need-Help-DeltaHacks-X-d4ef8f61369c4ba19cee6ff5817f3f84"
+                    target="_blank"
+                    >here!</a
+                >
+            </p>
+
+            <h2>Scavenger Hunt</h2>
+            <p>
+                Adam also toured me around campus and we ended up winning a
+                prize for completing a scavenger hunt.
+            </p>
+            <p>They gave us previous year's swag and also $15 on Amazon lol.</p>
+            <p>
+                (HE ALSO BROUGHT ME TO POKIMANE'S BUILDING WHEN SHE STUDIED AT
+                MCMASTER!!!)
+            </p>
+            <div class="slideshow-container">
+                <div class="slides3 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/scavenger1.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/scavenger1.jpg"
+                        />
+                    </a>
+                    <div class="text">Tier 3 Sub Behaviour</div>
+                </div>
+
+                <div class="slides3 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/scavenger2.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/scavenger2.jpg"
+                        />
+                    </a>
+                    <div class="text">Adam's Dorm Building</div>
+                </div>
+
+                <div class="slides3 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/scavenger3.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/scavenger3.jpg"
+                        />
+                    </a>
+                    <div class="text">McMaster Iron Ring</div>
+                </div>
+
+                <div class="slides3 fade">
+                    <a
+                        href="img/blink-twice-if-you-need-help/amazon.jpg"
+                        target="_blank"
+                    >
+                        <img
+                            src="img/blink-twice-if-you-need-help/amazon.jpg"
+                        />
+                    </a>
+                    <div class="text">we technically won deltahacks</div>
+                </div>
+
+                <br />
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+            </div>
+
+            <h2>Check it out!</h2>
+            <br />
+            <a
+                class="custom-link"
+                href="https://github.com/gavintranquilino/blink-twice-if-you-need-help"
+                target="_blank"
+                title="GitHub Repo"
+            >
+                <i class="fab fa-github github-icon"></i>
+                <span>GitHub Repo</span>
+            </a>
+            <br />
+            <a
+                class="custom-link"
+                href="https://devpost.com/software/blink-twice-if-you-need-help"
+                target="_blank"
+                title="Devpost Submission"
+            >
+                <i class="fas fa-code"></i>
+                <span>Devpost Submission</span>
+            </a>
+            <br />
+            <a
+                class="custom-link"
+                href="https://devpost.com/sullynumber9"
+                target="_blank"
+                title="Adam's Devpost"
+            >
+                <i class="fas fa-external-link-alt"></i>
+                <span>Adam's Devpost</span>
+            </a>
+            <br />
+            <a
+                class="custom-link"
+                href="https://devpost.com/gavintranquilino"
+                target="_blank"
+                title="Gavin's Devpost"
+            >
+                <i class="fas fa-external-link-alt"></i>
+                <span>Gavin's Devpost</span>
+            </a>
+            <br />
+        </div>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+
+        <script src="js/index.js"></script>
+    </body>
 </html>
