@@ -259,7 +259,7 @@ h3 {
 .hamburger::before,
 .hamburger::after {
   background: var(--clr-accent);
-  width: 2em;
+  width: 3em;
   height: 3px;
   border-radius: 1em;
   transition: transform 250ms ease-in-out;
@@ -282,14 +282,15 @@ h3 {
 }
 
 .theme-toggle {
+  margin-top: 0.5em;
   padding: 0.5em;
   background: var(--clr-accent);
   color: var(--clr-secondary);
-  font-size: 0.8em;
+  font-size: 1em;
   border: 0;
   border-radius: 5px;
   position: absolute;
-  right: 2em;
+  right: 1.5em;
   top: 3em;
   z-index: 100;
   transition: transform 200ms ease-in-out;
