@@ -238,12 +238,12 @@ const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
   
-  // Handle /project/guhbot specially - this should redirect to static page
+  // Handle /guhbot specially - this should redirect to static page
   useEffect(() => {
     if (projectId === 'guhbot') {
       // This would only execute if somehow the route was matched despite our App.tsx route config
       // Just to be extra sure, we'll redirect to the static page
-      window.location.href = '/project/guhbot/';
+      window.location.href = '/guhbot/';
     }
   }, [projectId]);
   

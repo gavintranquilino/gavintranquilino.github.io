@@ -8,7 +8,7 @@ import './App.css'; // Vite default styles, can be removed or modified
 // Custom component to handle redirects to static content
 const StaticRedirect: React.FC = () => {
   useEffect(() => {
-    window.location.replace('/project/guhbot/index.html');
+    window.location.replace('/guhbot/index.html');
   }, []);
   
   return <div>Redirecting to GuhBot...</div>;
@@ -19,10 +19,10 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* Redirect /project/guhbot to the static page */}
-        <Route path="/project/guhbot/*" element={<StaticRedirect />} />
-        {/* Route for other project detail pages, e.g., /project/blink-twice */}
-        <Route path="/project/:projectId" element={<ProjectDetailPage />} />
+        {/* Redirect /guhbot to the static page */}
+        <Route path="/guhbot/*" element={<StaticRedirect />} />
+        {/* Route for project detail pages with direct URLs, e.g., /blink-twice */}
+        <Route path="/:projectId" element={<ProjectDetailPage />} />
         {/* Admin page route */}
         <Route path="/admin" element={<AdminPage />} />
         {/* You can add a 404 Not Found route here later */}

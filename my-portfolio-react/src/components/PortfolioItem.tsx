@@ -9,7 +9,7 @@ interface PortfolioItemProps {
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ id, imageUrl, altText }) => {
   return (
-    <Link to={`/project/${id}`} className="portfolio__item">
+    <Link to={`/${id}`} className="portfolio__item">
       <img 
         src={imageUrl} 
         alt={altText} 

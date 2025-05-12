@@ -1,4 +1,4 @@
-# Prevent React router from handling /project/guhbot
+# Prevent React router from handling /guhbot
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -8,9 +8,9 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
   
-  # For requests to /project/guhbot, serve the static index.html in that directory
-  RewriteRule ^project/guhbot/?$ project/guhbot/index.html [L]
+  # For requests to /guhbot, serve the static index.html in that directory
+  RewriteRule ^guhbot/?$ guhbot/index.html [L]
   
-  # For requests to assets in /project/guhbot, serve them directly
-  RewriteRule ^project/guhbot/(.+)$ project/guhbot/$1 [L]
+  # For requests to assets in /guhbot, serve them directly
+  RewriteRule ^guhbot/(.+)$ guhbot/$1 [L]
 </IfModule> 

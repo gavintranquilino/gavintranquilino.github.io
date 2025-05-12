@@ -7,12 +7,12 @@ export default defineConfig({
   base: '/',
   server: {
     proxy: {
-      // Exclude /project/guhbot path from being handled by the dev server
+      // Exclude /guhbot path from being handled by the dev server
       // This ensures it's served as static files
-      '/project/guhbot': {
+      '/guhbot': {
         target: 'http://localhost:5173',
         bypass: (req) => {
-          if (req.url.startsWith('/project/guhbot')) {
+          if (req.url.startsWith('/guhbot')) {
             return req.url;
           }
         }

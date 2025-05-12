@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("images/bg.jpg");
+  background-image: url("/project/guhbot/assets/css/images/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,9 +19,30 @@
 #wrapper {
   position: relative;
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
-/* Add a fallback background color */
+/* Add a fallback background color and additional styling */
 body {
   background-color: #935d8c;
+  color: white;
+}
+
+#main article {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#header {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: 20px;
 } 
