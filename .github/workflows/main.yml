@@ -14,15 +14,15 @@ jobs:
       
       - name: Download PDF
         run: |
-          curl -o resume.pdf https://raw.githubusercontent.com/gavintranquilino/gavins-resume/main/out/Gavin_Tranquilino.pdf
-          ls -la
+          curl -o my-portfolio-react/public/resume.pdf https://raw.githubusercontent.com/gavintranquilino/gavins-resume/main/out/Gavin_Tranquilino.pdf
+          ls -la my-portfolio-react/public/
 
       - name: Commit changes
         run: |
           git config --global user.name ${{ secrets.GH_USERNAME }}
           git config --global user.email ${{ secrets.GH_EMAIL }}     
           git config --global url.https://${{ secrets.GH_TOKEN }}@github.com/.insteadOf https://github.com/
-          git checkout master
+          git checkout react-migration
           git add -A
           git commit -m "Update resume.pdf"
           git push

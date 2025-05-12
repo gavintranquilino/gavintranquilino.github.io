@@ -1,0 +1,17 @@
+# Handle static files for /project/guhbot
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # If requested resource exists as a file or directory, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # For requests to /project/guhbot, serve the static files
+  RewriteRule ^project/guhbot/?$ project/guhbot/index.html [L]
+  RewriteRule ^project/guhbot/(.*)$ project/guhbot/$1 [L]
+  
+  # For all other routes, pass to the index.html in the root
+  RewriteRule ^ index.html [L]
+</IfModule> 

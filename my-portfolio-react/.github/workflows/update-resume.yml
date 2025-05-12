@@ -1,0 +1,29 @@
+name: Update Resume PDF
+
+on:
+  repository_dispatch:
+    types: [pdf_update]
+  schedule:
+    # Run once a week to check for updates
+    - cron: '0 0 * * 0'
+
+jobs:
+  update_pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Download PDF
+        run: |
+          curl -o public/resume.pdf https://raw.githubusercontent.com/gavintranquilino/gavins-resume/main/out/Gavin_Tranquilino.pdf
+          ls -la public/
+
+      - name: Commit changes
+        run: |
+          git config --global user.name ${{ secrets.GH_USERNAME }}
+          git config --global user.email ${{ secrets.GH_EMAIL }}     
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update resume.pdf"
+          git push 

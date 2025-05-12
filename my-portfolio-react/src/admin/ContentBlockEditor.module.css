@@ -1,0 +1,214 @@
+.blockEditor {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.fieldHelp {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal slideshow layout */
+.slideList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
+  min-height: 280px;
+}
+
+.linkItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+/* Slide item card */
+.slideItem {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.slideItem:hover {
+  border-color: #2196f3;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slidePreview {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.slideshowHeading {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageDragDrop {
+  width: 100%;
+}
+
+.dropZone {
+  border: 2px dashed #ccc;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  background-color: #f8f9fa;
+  transition: all 0.2s;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropZone:hover, .dropZone.dragOver {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.slideFields,
+.linkFields {
+  flex: 1;
+}
+
+.slideActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Updated arrow buttons with black color */
+.moveButton {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.moveButton:hover:not(.disabled) {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.moveButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.deleteButton {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.deleteButton:hover {
+  background-color: #ffebee;
+  border-color: #ffcdd2;
+}
+
+.addButton {
+  background-color: #e0f7fa;
+  color: #00838f;
+  border: 1px solid #b2ebf2;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #b2ebf2;
+}
+
+.imagePreviewContainer {
+  margin-bottom: 1rem;
+  max-width: 300px;
+}
+
+.slideshowContainer {
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: #fafafa;
+  margin-bottom: 20px;
+} 

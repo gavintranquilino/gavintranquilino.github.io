@@ -1,0 +1,348 @@
+.previewContainer {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.previewHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.previewTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.previewSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.previewImage {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.previewImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.previewContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Block styles */
+.previewBlock {
+  position: relative;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  border: 1px dashed transparent;
+  transition: all 0.2s ease;
+}
+
+.previewBlock:hover {
+  border-color: #2196f3;
+  background-color: rgba(33, 150, 243, 0.05);
+}
+
+.activeBlock {
+  border-color: #2196f3;
+  background-color: rgba(33, 150, 243, 0.1);
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+/* Block controls */
+.blockControls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.previewBlock:hover .blockControls {
+  opacity: 1;
+}
+
+.moveUpButton,
+.moveDownButton,
+.deleteButton {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.moveUpButton:hover,
+.moveDownButton:hover {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.deleteButton:hover {
+  background-color: #ffebee;
+  border-color: #f44336;
+}
+
+.moveUpButton:disabled,
+.moveDownButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Add block button */
+.addBlockButtonContainer {
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+}
+
+.previewBlock:hover .addBlockButtonContainer {
+  opacity: 1;
+}
+
+.addBlockButton {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.35rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.addBlockButton:hover {
+  background-color: #1976d2;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.addBlockDropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 180px;
+  z-index: 20;
+}
+
+.addBlockDropdown button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.addBlockDropdown button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Content block specific styles */
+.heading {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.paragraph {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.imageContainer {
+  margin: 0;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.imageCaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.75rem;
+}
+
+.slideshow {
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  text-align: center;
+}
+
+.slideshowPreview {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.slideshowImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slideshowInfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0 8px 0 8px;
+}
+
+.slideshowEmpty {
+  padding: 2rem;
+  font-style: italic;
+  color: #999;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease;
+}
+
+.linkItem:hover {
+  background-color: #e0e0e0;
+}
+
+.linkIcon {
+  color: #2196f3;
+  font-size: 1.25rem;
+  width: 24px;
+  text-align: center;
+}
+
+.linkTitle {
+  font-weight: 500;
+  color: #2196f3;
+}
+
+.videoContainer,
+.googlePhotosContainer {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.videoPreview,
+.googlePhotosPreview {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.videoPlaceholder,
+.googlePhotosPlaceholder {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.unknownBlock {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* Empty project */
+.emptyProjectButtons {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.emptyProjectButtons h3 {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.emptyProjectButtonsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emptyProjectButtonsGrid button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.emptyProjectButtonsGrid button:hover {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
