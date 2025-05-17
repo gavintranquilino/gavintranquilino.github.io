@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      if (path.endsWith('.html')) {
+        var newPath = path.slice(0, -5) + window.location.search + window.location.hash;
+        window.location.replace(newPath);
+      } else {
+        window.location.replace('\/');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="/">home</a>…</p>
+</body>
+</html>
