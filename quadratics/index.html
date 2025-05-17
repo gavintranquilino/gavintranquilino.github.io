@@ -1,0 +1,203 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Quadratics Solver | Gavin Tranquilino</title>
+<link rel=icon href=/img/smile-round.svg><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin=anonymous referrerpolicy=no-referrer><meta property="og:url" content="https://gavintranquilino.com/quadratics/"><meta property="og:type" content="article"><meta property="og:title" content="<strong>Quadratics Solver</strong>"><meta property="og:description" content='What does it do? This quadratics solver app uses matplotlib to graph a quadratic equation. This application also solves the equation in vertex form, solves for the roots, and solves for the vertex.
+Source Code # main.py from equation import Equation, graph def main(): # User input while True: try: a = int( input(&#39;What is the "a" value of your equation? (in standard form):\n&#39;) ) b = int(input(&#39;"b" value? (in standard form):\n&#39;)) c = int(input(&#39;"c" value?'><meta property="og:image" content="https://gavintranquilino.com/img/quadratic.png"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"><link rel=stylesheet href=/css/style.css></head><body><header><div class=logo></div><button class=nav-toggle aria-label="toggle navigation">
+<span class=hamburger></span>
+</button>
+<button class=theme-toggle aria-label="toggle theme">
+<span class=sun-moon><i class="fas fa-cloud-sun"></i></span>
+</button>
+<button onclick=topFunction() class=to-top>
+<span class=up-arrow></span></button><nav class=nav><ul class=nav__list><li class=nav__item><a href=/#home class=nav__link>Home</a></li><li class=nav__item><a href=/#about class=nav__link>About Me</a></li><li class=nav__item><a href=/#work class=nav__link>My Work</a></li></ul></nav></header><main id=main-content><section class=intro><h1 class="section__title section__title--intro"><strong>Quadratics Solver</strong></h1><p class="section__subtitle section__subtitle--intro">I May Have Used This For My Homework :)</p><img src=https://gavintranquilino.com/img/quadratic.png alt="<strong>Quadratics Solver</strong> main image" class=intro__img loading=lazy></section><article class=project-content><h2 id=what-does-it-do>What does it do?</h2><p>This quadratics solver app uses matplotlib to graph a quadratic equation. This application also solves the equation in vertex form, solves for the roots, and solves for the vertex.</p><h2 id=source-code>Source Code</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># main.py</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> equation <span style=color:#f92672>import</span> Equation, graph
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>main</span>():
+</span></span><span style=display:flex><span>    <span style=color:#75715e># User input</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> <span style=color:#66d9ef>True</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            a <span style=color:#f92672>=</span> int(
+</span></span><span style=display:flex><span>                input(<span style=color:#e6db74>&#39;What is the &#34;a&#34; value of your equation? (in standard form):</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>)
+</span></span><span style=display:flex><span>            )
+</span></span><span style=display:flex><span>            b <span style=color:#f92672>=</span> int(input(<span style=color:#e6db74>&#39;&#34;b&#34; value? (in standard form):</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>))
+</span></span><span style=display:flex><span>            c <span style=color:#f92672>=</span> int(input(<span style=color:#e6db74>&#39;&#34;c&#34; value? (in standard form):</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>))
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>break</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span>:
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Equation class</span>
+</span></span><span style=display:flex><span>    equation <span style=color:#f92672>=</span> Equation((a, b, c))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    standard_form <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>get_standard_form()
+</span></span><span style=display:flex><span>    vertex_form <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>get_vertex_form()
+</span></span><span style=display:flex><span>    a, b, c <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>    x1, x2 <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>get_zeros()
+</span></span><span style=display:flex><span>    x, y <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>get_vertex()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    print(
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    [+] Standard Form = </span><span style=color:#e6db74>{}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    [+] Vertex Form = </span><span style=color:#e6db74>{}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    [+] 1st zero/root = </span><span style=color:#e6db74>{}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    [+] 2nd zero/root = </span><span style=color:#e6db74>{}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    [+] Vertex = </span><span style=color:#e6db74>{}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    [+] AOS: x = </span><span style=color:#e6db74>{}</span><span style=color:#e6db74>&#34;&#34;&#34;</span><span style=color:#f92672>.</span>format(
+</span></span><span style=display:flex><span>            standard_form, vertex_form, x1, x2, (x, y), x
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    graph(equation)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> __name__ <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;__main__&#34;</span>:
+</span></span><span style=display:flex><span>    main()
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># equation.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> math
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Equation</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, values):
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>values <span style=color:#f92672>=</span> values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_zeros</span>(self):
+</span></span><span style=display:flex><span>        a, b, c <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> (b <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>) <span style=color:#f92672>-</span> (<span style=color:#ae81ff>4</span> <span style=color:#f92672>*</span> a <span style=color:#f92672>*</span> c)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        x1 <span style=color:#f92672>=</span> (<span style=color:#f92672>-</span>b <span style=color:#f92672>+</span> math<span style=color:#f92672>.</span>sqrt(x)) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>        x2 <span style=color:#f92672>=</span> (<span style=color:#f92672>-</span>b <span style=color:#f92672>-</span> math<span style=color:#f92672>.</span>sqrt(x)) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> x1, x2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_vertex</span>(self):
+</span></span><span style=display:flex><span>        a, b, c <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> (<span style=color:#f92672>-</span>b) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        y <span style=color:#f92672>=</span> ((<span style=color:#ae81ff>4</span> <span style=color:#f92672>*</span> a <span style=color:#f92672>*</span> c) <span style=color:#f92672>-</span> (b <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>)) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>4</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> x, y
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_standard_form</span>(self):
+</span></span><span style=display:flex><span>        a, b, c <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{}</span><span style=color:#e6db74>x^2 + </span><span style=color:#e6db74>{}</span><span style=color:#e6db74>x + </span><span style=color:#e6db74>{}</span><span style=color:#e6db74>&#34;</span><span style=color:#f92672>.</span>format(a, b, c)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_vertex_form</span>(self):
+</span></span><span style=display:flex><span>        a <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>        h, k <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>get_vertex()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>a<span style=color:#e6db74>}</span><span style=color:#e6db74>(x-</span><span style=color:#e6db74>{</span>h<span style=color:#e6db74>}</span><span style=color:#e6db74>)^2 + </span><span style=color:#e6db74>{</span>k<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>graph</span>(equation):
+</span></span><span style=display:flex><span>    a, b, c <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>    r1, r2 <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>get_zeros()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> r1 <span style=color:#f92672>&lt;</span> r2:
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> r1
+</span></span><span style=display:flex><span>        y <span style=color:#f92672>=</span> r2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> r2
+</span></span><span style=display:flex><span>        y <span style=color:#f92672>=</span> r1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    roots1 <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    roots2 <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    fig <span style=color:#f92672>=</span> plt<span style=color:#f92672>.</span>figure()
+</span></span><span style=display:flex><span>    ax <span style=color:#f92672>=</span> fig<span style=color:#f92672>.</span>add_subplot(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Set axes</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;left&#39;].set_position(&#39;center&#39;)</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;bottom&#39;].set_position(&#39;zero&#39;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;right&#39;].set_color(&#39;none&#39;) # remove vertical box line</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;top&#39;].set_color(&#39;none&#39;) # remove horizontal box line</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.xaxis.set_ticks_position(&#39;bottom&#39;)</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.yaxis.set_ticks_position(&#39;left&#39;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> x <span style=color:#f92672>&lt;</span> y:
+</span></span><span style=display:flex><span>        base <span style=color:#f92672>=</span> float((a <span style=color:#f92672>*</span> (x <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>)) <span style=color:#f92672>+</span> (b <span style=color:#f92672>*</span> x) <span style=color:#f92672>+</span> c)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        roots1<span style=color:#f92672>.</span>append(x)
+</span></span><span style=display:flex><span>        roots2<span style=color:#f92672>.</span>append(base)
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>+=</span> <span style=color:#ae81ff>0.0001</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    plt<span style=color:#f92672>.</span>plot(roots1, roots2, <span style=color:#e6db74>&#34;g&#34;</span>)
+</span></span><span style=display:flex><span>    plt<span style=color:#f92672>.</span>show()<span style=color:#f92672>import</span> math
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Equation</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> __init__(self, values):
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>values <span style=color:#f92672>=</span> values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_zeros</span>(self):
+</span></span><span style=display:flex><span>        a, b, c <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> (b <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>) <span style=color:#f92672>-</span> (<span style=color:#ae81ff>4</span> <span style=color:#f92672>*</span> a <span style=color:#f92672>*</span> c)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        x1 <span style=color:#f92672>=</span> (<span style=color:#f92672>-</span>b <span style=color:#f92672>+</span> math<span style=color:#f92672>.</span>sqrt(x)) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>        x2 <span style=color:#f92672>=</span> (<span style=color:#f92672>-</span>b <span style=color:#f92672>-</span> math<span style=color:#f92672>.</span>sqrt(x)) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> x1, x2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_vertex</span>(self):
+</span></span><span style=display:flex><span>        a, b, c <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> (<span style=color:#f92672>-</span>b) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        y <span style=color:#f92672>=</span> ((<span style=color:#ae81ff>4</span> <span style=color:#f92672>*</span> a <span style=color:#f92672>*</span> c) <span style=color:#f92672>-</span> (b <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>)) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>4</span> <span style=color:#f92672>*</span> a)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> x, y
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_standard_form</span>(self):
+</span></span><span style=display:flex><span>        a, b, c <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{}</span><span style=color:#e6db74>x^2 + </span><span style=color:#e6db74>{}</span><span style=color:#e6db74>x + </span><span style=color:#e6db74>{}</span><span style=color:#e6db74>&#34;</span><span style=color:#f92672>.</span>format(a, b, c)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_vertex_form</span>(self):
+</span></span><span style=display:flex><span>        a <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>values[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>        h, k <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>get_vertex()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>a<span style=color:#e6db74>}</span><span style=color:#e6db74>(x-</span><span style=color:#e6db74>{</span>h<span style=color:#e6db74>}</span><span style=color:#e6db74>)^2 + </span><span style=color:#e6db74>{</span>k<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>graph</span>(equation):
+</span></span><span style=display:flex><span>    a, b, c <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>values
+</span></span><span style=display:flex><span>    r1, r2 <span style=color:#f92672>=</span> equation<span style=color:#f92672>.</span>get_zeros()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> r1 <span style=color:#f92672>&lt;</span> r2:
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> r1
+</span></span><span style=display:flex><span>        y <span style=color:#f92672>=</span> r2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> r2
+</span></span><span style=display:flex><span>        y <span style=color:#f92672>=</span> r1
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    roots1 <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    roots2 <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    fig <span style=color:#f92672>=</span> plt<span style=color:#f92672>.</span>figure()
+</span></span><span style=display:flex><span>    ax <span style=color:#f92672>=</span> fig<span style=color:#f92672>.</span>add_subplot(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Set axes</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;left&#39;].set_position(&#39;center&#39;)</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;bottom&#39;].set_position(&#39;zero&#39;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;right&#39;].set_color(&#39;none&#39;) # remove vertical box line</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.spines[&#39;top&#39;].set_color(&#39;none&#39;) # remove horizontal box line</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.xaxis.set_ticks_position(&#39;bottom&#39;)</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># ax.yaxis.set_ticks_position(&#39;left&#39;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> x <span style=color:#f92672>&lt;</span> y:
+</span></span><span style=display:flex><span>        base <span style=color:#f92672>=</span> float((a <span style=color:#f92672>*</span> (x <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>)) <span style=color:#f92672>+</span> (b <span style=color:#f92672>*</span> x) <span style=color:#f92672>+</span> c)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        roots1<span style=color:#f92672>.</span>append(x)
+</span></span><span style=display:flex><span>        roots2<span style=color:#f92672>.</span>append(base)
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>+=</span> <span style=color:#ae81ff>0.0001</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    plt<span style=color:#f92672>.</span>plot(roots1, roots2, <span style=color:#e6db74>&#34;g&#34;</span>)
+</span></span><span style=display:flex><span>    plt<span style=color:#f92672>.</span>show()
+</span></span></code></pre></div><p>Ensure both files are in the same project directory. Run <code>python main.py</code> to start the application.</p><a href=https://github.com/gavintranquilino/quadratics title="GitHub Source Code" target=_blank rel="noopener noreferrer" class="custom-link icon-link"><i class="fab fa-github"></i><span>GitHub Source Code</span></a><br></article></main><footer class=footer><a href=mailto:gtranqui@uwaterloo.ca class=footer__link>gtranqui@uwaterloo.ca</a><ul class=social-list><li class=social-list__item><a class=social-list__link href=https://linkedin.com/in/gavintranquilino/ target=_blank rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li><li class=social-list__item><a class=social-list__link href=https://github.com/gavintranquilino target=_blank rel="noopener noreferrer"><i class="fab fa-github"></i></a></li><li class=social-list__item><a class=social-list__link href=https://www.youtube.com/@gavintranquilino target=_blank rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></li><li class=social-list__item><a class=social-list__link href=https://www.twitter.com/@gavintranqui target=_blank rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li><li class=social-list__item><a class=social-list__link href=https://discord.gg/cZKEPHugRt target=_blank rel="noopener noreferrer"><i class="fab fa-discord"></i></a></li><li class=social-list__item><a class=social-list__link href=https://devpost.com/gavintranquilino target=_blank rel="noopener noreferrer"><i class="fab fa-dev"></i></a></li><li class=social-list__item><a class=social-list__link href=https://stackoverflow.com/users/13495609/guhbean target=_blank rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i></a></li><li class=social-list__item><a class=social-list__link href=https://www.instagram.com/gavin.tranq/ target=_blank rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li></ul></footer><script src=/js/index.js></script><script src=https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js async></script></body></html>

@@ -1,122 +1,111 @@
-*,
-*::before *::after {
-  box-sizing: border-box; /* how padding is calculated */
+*, 
+*::before
+*::after {
+    box-sizing: border-box; /* how padding is calculated */
 }
 
-/* Custom Properties to be used as variables*/
+/* Custom Properties to be used as variables*/ 
 
 :root {
-  /* Set Fonts */
-  --ff-primary: "Source Sans Pro", sans-serif;
-  --ff-secondary: "Source Code Pro", monospace;
+    /* Set Fonts */
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
 
-  /* Set Font weight */
-  --fw-reg: 300;
-  --fw-bold: 900;
+    /* Set Font weight */
+    --fw-reg: 300;
+    --fw-bold: 900;
 
-  /* Colour */
-  --clr-primary: #fffaed;
-  --clr-secondary: #303030;
-  --clr-accent: #ff7e5f;
+    /* Colour */
+    --clr-primary: #fffaed;
+    --clr-secondary: #303030;
+    --clr-accent: #ff7e5f;
 
-  --clr-primary-static: #fffaed;
-  --clr-secondary-static: #303030;
+    --clr-primary-static: #fffaed;
+    --clr-secondary-static: #303030;
 
-  --fs-h1: 3rem; /* 1rem = 16px */
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+    --fs-h1: 3rem; /* 1rem = 16px */
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;   
+    --fs-body: 1rem;
 
-  --border-rad: 10px;
+    --border-rad: 10px;
 
-  /* box shadow 0.25 right, 0.25 down 0.75 blur*/
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+    /* box shadow 0.25 right, 0.25 down 0.75 blur*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+          0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
 }
 
 /* Theme Toggle */
-body.dark-theme{
-  --clr-primary: #262b2f;
-  --clr-secondary: #fffaed;
-  --clr-accent: #c14a09;
+body.dark-theme {
+    --clr-primary: #262b2f;
+    --clr-secondary: #fffaed;
+    --clr-accent: #c14a09;
 }
 
-/* toggle all about-me--btn colors */
-body.dark-theme .about-me--btn {
-  background: var(--clr-accent);
-  color: var(--clr-secondary);
-}
-
-@media (min-width: 800px) {
-  /* media rule acts as if statement */
-  :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
-    --fs-h3: 1.5rem;
-    --fs-body: 1.125rem;
-  }
+@media (min-width: 800px) { /* media rule acts as if statement */
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;   
+        --fs-body: 1.125rem;
+    }
 }
 
 /* General Styles */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--clr-primary); /* variable from root */
-  color: var(--clr-secondary);
-  margin: 0;
-  font-family: var(--ff-primary);
-  font-size: var(--fs-body);
-  line-height: 1.6;
+    background: var(--clr-primary); /* variable from root */
+    color: var(--clr-secondary);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
 
 section {
-  padding: 3em 3em;
+    padding: 3em 3em;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
-strong {
-  font-weight: var(--fw-bold);
-}
+strong { font-weight: var(--fw-bold);}
 
-:focus {
-  outline: 3px solid var(--clr-accent);
-  outline-offset: 3px;
+:focus { 
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
 }
 
 /* Buttons */
 
-.btn-container {
-  text-align: center;
-}
-
 .btn {
-  display: inline-block;
-  margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
-  padding: 0.5em 1.5em;
-  background: var(--clr-primary-static);
-  border-radius: 5px;
-  color: var(--clr-secondary-static);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
+    display: inline-block;
+    margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
+    padding: 0.5em 1.5em;
+    background: var(--clr-primary-static);
+    border-radius: 5px;
+    color: var(--clr-secondary-static);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
 }
 
 .btn:hover {
-  background-color: var(--clr-accent);
-  transform: scale(1.1);
-  outline: 3px solid var(--clr-primary);
-  outline-offset: 3px;
+    background-color: var(--clr-accent);
+    transform: scale(1.1);
+    outline: 3px solid var(--clr-primary);
+    outline-offset: 3px;
 }
 
 /* Typography */
@@ -124,318 +113,398 @@ strong {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
-  margin: 0;
+    line-height: 1.1;
+    margin: 0;
 }
 
-h1 {
-  font-size: var(--fs-h1);
-}
-h2 {
-  font-size: var(--fs-h2);
-}
-h3 {
-  font-size: var(--fs-h3);
-}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
 
-.section__title {
-  /* [.] = class, [#] = id */
-  margin-bottom: 0.25em; /* em for text, relative to font size */
+.section__title { /* [.] = class, [#] = id */ 
+    margin-bottom: 0.25em; /* em for text, relative to font size */
 }
 
 .section__title--intro {
-  font-weight: var(--fw-reg);
-  /* margin-bottom: 1em; */
+    font-weight: var(--fw-reg);
+    /* margin-bottom: 1em; */
 }
 
-.section__title--intro strong {
-  /* Edit strong tag of intro only */
-  display: block; /* Keep name on separate line */
+.section__title--intro strong { /* Edit strong tag of intro only */
+    display: block; /* Keep name on separate line */
 }
 
-.section__subtitle {
-  /* [.] = class, [#] = id */
-  margin: 0;
-  font-size: var(--fs-h3);
+.section__subtitle { /* [.] = class, [#] = id */ 
+    margin: 0;
+    font-size: var(--fs-h3);
 }
 
 .section__subtitle--intro,
 .section__subtitle--about {
-  background: var(--clr-accent);
-  border-radius: var(--border-rad);
-  padding: 0.25em;
-  font-family: var(--ff-secondary);
-  margin-bottom: 1em;
+    background: var(--clr-accent);
+    border-radius: var(--border-rad);
+    padding: 0.25em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+/* NEW: Link styling within .about-me__body from homepage .Content */
+
+/* For INLINE links (within a paragraph that has other text) in .about-me__body */
+.about-me__body p a:not(:only-child) {
+    font-size: inherit !important;   /* Ensure font size matches surrounding text */
+    font-weight: inherit !important;  /* Ensure font weight matches surrounding text */
+    /* text-decoration: underline; */ /* Ensure underline if not covered by general 'a' styles */
+    /* color: var(--clr-accent); */  /* Ensure link color if not covered by general 'a' styles */
+}
+
+/* Hide <i> tag icons that are SIBLINGS to an inline link in .about-me__body */
+.about-me__body p a:not(:only-child) + i {
+    display: none !important;
+}
+
+/* Hide <i> tag icons that are CHILDREN of an inline link in .about-me__body */
+.about-me__body p a:not(:only-child) i {
+    display: none !important;
+}
+
+/* Hide icons added by CSS pseudo-elements for inline links in .about-me__body */
+.about-me__body p a:not(:only-child)::before,
+.about-me__body p a:not(:only-child)::after {
+    content: "" !important; /* Important to override other content rules */
+    display: none !important;
+    margin: 0 !important; /* Reset any margins/paddings from icon rules */
+    padding: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* For STANDALONE links (a link as the only child of a paragraph) in .about-me__body */
+/* These links can retain their potentially different font size and icon. */
+/* If their font size needs adjustment, do it here. Icons are assumed to be handled by existing rules or markdown. */
+.about-me__body p > a:only-child {
+    /* Example: font-size: 1.1em; */
+    /* Standalone links will keep their icons if they have them via markdown or other CSS. */
 }
 
 /* Header */
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
 }
 
 .logo {
-  width: 10%;
+    width: 10%;
 }
 
 .nav {
-  position: fixed;
-  background: var(--clr-secondary-static);
-  color: var(--clr-primary-static);
-  /* Fill screen */
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100; /* Keep in front */
+    position: fixed;
+    background: var(--clr-secondary-static);
+    color: var(--clr-primary-static);
+    /* Fill screen */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Keep in front */
 
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 .nav__list {
-  display: flex;
-  list-style: none;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav__link {
-  color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h2);
-  text-decoration: none;
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
 }
 
 .nav__link:hover {
-  color: var(--clr-accent);
+    color: var(--clr-accent);  
 }
 
 .nav-toggle {
-  padding: 0.5em;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  z-index: 1000;
+    padding: 0.5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+    border-radius: 5px; /* Added for rounded focus outline */
+}
+
+/* Global :focus style will apply to .nav-toggle by default now */
+/* .nav-toggle:focus {
+    outline: none; 
+} */
+
+/* Default focus style for nav-toggle (closed state) */
+.nav-toggle:focus {
+    outline: none; /* Remove default/global outline */
+    box-shadow: 0 0 0 3px var(--clr-accent); /* Rounded outline */
 }
 
 .nav-open .nav {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 .nav-open .nav-toggle {
-  position: fixed;
+    position: fixed;
+    /* outline: none; Ensured by the general .nav-toggle:focus above or can be more specific if needed */
+}
+
+/* Specifically remove outline AND box-shadow for nav-toggle when nav is open and button is focused */
+/* The focus indication for the open state is handled by box-shadows on the .hamburger elements themselves */
+.nav-open .nav-toggle:focus {
+    outline: none;
+    box-shadow: none; /* Remove the box-shadow from the closed state */
 }
 
 .nav-open .hamburger {
-  transform: rotate(225deg);
-  background: var(--clr-primary-static);
+    transform: rotate(225deg);
+    background: var(--clr-primary-static);
+    box-shadow: 0 0 0 1px var(--clr-primary-static);
+}
+
+/* Custom focus style for open hamburger (X) - box-shadow acts as shaped, offset outline */
+.nav-open .nav-toggle:focus .hamburger {
+    box-shadow: 0 0 0 1px var(--clr-primary-static), /* X bar */
+                0 0 0 3px var(--clr-secondary-static), /* Gap (using nav background). Spread = 1px X + 2px gap */
+                0 0 0 5px var(--clr-accent);       /* Outline. Spread = 1px X + 2px gap + 2px outline */
+    outline: none; /* Explicitly ensure no default outline for the X state */
 }
 
 .nav-open .hamburger::before {
-  transform: rotate(90deg) translateX(-6px);
-  background: var(--clr-primary-static);
+    transform: rotate(90deg) translateX(-6px);
+    background: var(--clr-primary-static);
+    box-shadow: 0 0 0 1px var(--clr-primary-static);
+}
+
+/* Custom focus style for open hamburger (X) ::before part - box-shadow acts as shaped, offset outline */
+.nav-open .nav-toggle:focus .hamburger::before {
+    box-shadow: 0 0 0 1px var(--clr-primary-static), /* X bar */
+                0 0 0 3px var(--clr-secondary-static), /* Gap. Spread = 1px X + 2px gap */
+                0 0 0 5px var(--clr-accent);       /* Outline. Spread = 1px X + 2px gap + 2px outline */
+    outline: none; /* Explicitly ensure no default outline for the X state */
 }
 
 .nav-open .hamburger::after {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-accent);
-  width: 3em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
+    background: var(--clr-accent);
+    width: 3em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
 }
 
 .hamburger::before,
 .hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .hamburger::before {
-  top: 6px;
+    top: 6px;
 }
 
 .hamburger::after {
-  bottom: 6px;
+    bottom: 6px;
+}
+
+/* NO Custom focus style for closed hamburger - box-shadow acts as shaped outline */
+/* Applied when .nav-toggle:focus and not .nav-open */
+.nav-toggle:focus .hamburger,
+.nav-toggle:focus .hamburger::before,
+.nav-toggle:focus .hamburger::after {
+    /* Make it slightly more prominent if it's the only indicator */
+    box-shadow: none; 
 }
 
 .theme-toggle {
-  margin-top: 0.5em;
-  padding: 0.5em;
-  background: var(--clr-accent);
-  color: var(--clr-secondary);
-  font-size: 1em;
-  border: 0;
-  border-radius: 5px;
-  position: absolute;
-  right: 1.5em;
-  top: 3em;
-  z-index: 100;
-  transition: transform 200ms ease-in-out;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background: var(--clr-accent);
+    color: var(--clr-secondary);
+    font-size: 1em;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    right: 1.5em;
+    top: 3em;
+    z-index: 100;
+    transition: transform 200ms ease-in-out;
 }
 
 .theme-toggle:hover {
-  background-color: var(--clr-accent);
-  transform: scale(1.1);
-  outline: 3px solid var(--clr-primary);
-  outline-offset: 3px;
+    background-color: var(--clr-accent);
+    transform: scale(1.1);
+    outline: 3px solid var(--clr-primary);
+    outline-offset: 3px;
 }
 
 .nav-open .to-top {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .to-top {
-  border-radius: 5px;
-  padding: 0.5em;
-  background: var(--clr-accent);
-  border: 0;
-  position: fixed;
-  right: 1em;
-  bottom: 0.5em;
-  z-index: 99;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+    border-radius: 5px;
+    padding: 0.5em;
+    background: var(--clr-accent);
+    border: 0;
+    position: fixed;
+    right: 1em;
+    bottom: 0.5em;
+    z-index: 99;
+    transition: background-color .3s, 
+        opacity .5s, visibility .5s;
 }
 
 .to-top:hover {
-  cursor: pointer;
-  background-color: #333;
+    cursor: pointer;
+    background-color: #333;
 }
 
 .up-arrow {
-  display: block;
-  position: relative;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid var(--clr-primary);
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--clr-primary);
 }
 
 /* Intro section */
 
 .intro {
-  position: relative;
+    position: relative;
 }
 
 .intro__img {
-  border-radius: 50%;
-  box-shadow: var(--bs);
+    border-radius: 50%;
+    box-shadow: var(--bs);
 }
 
-@media (min-width: 600px) {
-  /* Handle Hi, I am Gavin when width > 600*/
-  .intro {
-    display: grid;
-    width: min-content;
-    margin: 0 auto; /* Keep centered */
-    grid-column-gap: 1em;
-    grid-template-areas:
-      "img title"
-      "img subtitle";
-    grid-template-columns: min-content max-content;
-  }
+@media (min-width: 600px) { /* Handle Hi, I am Gavin when width > 600*/
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto; /* Keep centered */
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
 
-  .intro__img {
-    grid-area: img;
-    min-width: 250px;
-    position: relative;
-    z-index: 2; /* Keep image to front */
-  }
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2; /* Keep image to front */
+    }
 
-  .section__subtitle--intro {
-    align-self: start; /* Stop intro box from stretching vertically */
-    grid-column: -1 / 1;
-    grid-row: 2;
-    text-align: right;
-    position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.25em);
-  }
+    .section__subtitle--intro {
+        align-self: start; /* Stop intro box from stretching vertically */ 
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.25em);
+    }
 }
+
 
 /* My Services */
 
 .my-services {
-  background-color: var(--clr-secondary-static);
-  background-image: url(../img/code.png);
-  background-size: cover;
-  background-blend-mode: multiply;
-  color: var(--clr-primary-static);
-  text-align: center;
+    background-color: var(--clr-secondary-static);
+    background-image: url(../img/code.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-primary-static);
+    text-align: center;
 }
 
 .section__title--services {
-  color: var(--clr-accent);
-  position: relative;
-  margin: 0;
+    color: var(--clr-accent);
+    position: relative;
+    margin: 0;
 }
 
 /* Line below title sudo element */
 .section__title--services::after {
-  content: "";
-  display: block;
-  width: 25%;
-  height: 1px;
-  margin: 0.5em auto 1em;
-  background: currentColor; /* Match title clr */
-  opacity: 0.25;
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em; 
+    background: currentColor; /* Match title clr */
+    opacity: 0.25;
 }
 
-.services {
-  margin-bottom: 4em;
+.services { 
+    margin-bottom: 4em;
 }
 
 .service {
-  max-width: 500px;
-  margin: 0 auto;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 @media (min-width: 900px) {
-  .services {
-    display: flex; /* 3 grid */
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .services {
+        display: flex; /* 3 grid */
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-  /* Syle next service tag after the first service tag */
-  .service + .service {
-    margin-left: 2em;
-  }
+    /* Syle next service tag after the first service tag */
+    .service + .service {
+        margin-left: 2em; 
+    }
 }
 
 .about-me {
-  max-width: 1000px;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto; 
 }
 
 .about-me__img {
-  border-radius: var(--border-rad);
-  box-shadow: var(--bs);
+    border-radius: var(--border-rad);
+    box-shadow: var(--bs);
 }
+
+/* Styles for About Me buttons, ensuring they are present */
 
 .about-me__btn {
   position: relative;
@@ -446,207 +515,219 @@ h3 {
   display: inline-block;
   margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
   padding: 0.5em 1.5em;
-  background: var(--clr-secondary-static);
+  background: var(--clr-secondary-static); /* Default background */
   border-radius: 5px;
-  color: var(--clr-primary-static);
+  color: var(--clr-primary-static);      /* Default text color */
   text-decoration: none;
   cursor: pointer;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 .about-me--btn:hover {
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent); /* Accent color on hover */
   transform: scale(1.1);
   outline: 3px solid var(--clr-secondary);
   outline-offset: 3px;
 }
 
+/* Specific hover style for the Google Photos album button */
+.about-me--btn.google-album-button:hover {
+    color: var(--clr-secondary-static); /* Dark text on accent background (for Light Theme) */
+}
+
+body.dark-theme .about-me--btn.google-album-button:hover {
+    color: var(--clr-primary-static); /* Light text on dark accent background (for Dark Theme) */
+}
+
 @media (min-width: 600px) {
-  .about-me {
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    grid-template-areas: /* Layout */
-      "title img"
-      "subtitle img"
-      "text img";
-    grid-column-gap: 2em;
-  }
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: /* Layout */
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
 
-  /* Grid Area assigns value to layout */
-  .section__title--about {
-    grid-area: title;
-  }
+    /* Grid Area assigns value to layout */
+    .section__title--about{ 
+        grid-area: title;
+    }
 
-  .section__subtitle--about {
-    /* Stretch subtitle box through img */
-    grid-column: 1 / -1;
-    grid-row: 2;
-    position: relative;
-    left: -1em;
-    width: calc(100% + 1.5em);
-  }
+    .section__subtitle--about {
+        /* Stretch subtitle box through img */
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 1.5em);
+    }
 
-  .about-me__img {
-    grid-area: img;
-    position: relative;
-    z-index: 2;
-  }
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .my-work {
-  background-color: var(--clr-secondary-static);
-  color: var(--clr-primary-static);
-  text-align: center;
+    background-color: var(--clr-secondary-static);
+    color: var(--clr-primary-static);
+    text-align: center;
 }
 
 .section__subtitle--work {
-  color: var(--clr-accent);
-  font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
 }
 
 .portfolio {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* flexible columns */
-  min-width: 0;
-  max-width: 2000px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* flexible columns */
+    min-width: 0;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .portfolio__item {
-  margin: 20px;
-  border-radius: var(--border-rad);
-  background-color: var(--clr-accent);
-  overflow: hidden;
-  position: relative;
+    margin: 20px;
+    border-radius: var(--border-rad);
+    background-color: var(--clr-accent);
+    overflow: hidden;
+    position: relative;
 }
 
 .portfolio__img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+    transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+    opacity 250ms linear;
+    ;
 }
 
 .portfolio__item:focus {
-  position: relative;
-  z-index: 2; /* Keep on top */
+    position: relative;
+    z-index: 2; /* Keep on top */
 }
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-  transform: scale(1.2);
-  opacity: 0.75;
+    transform: scale(1.2);
+    opacity: 0.75;
 }
 
 /* Footer */
 
 .footer {
-  background: #111;
-  color: var(--clr-accent);
-  font-size: var(--fs-h3);
-  text-align: center;
-  padding: 2.5em 0;
+    background: #111;
+    color: var(--clr-accent);
+    font-size: var(--fs-h3);    
+    text-align: center;
+    padding: 2.5em 0;
 }
 
-.footer a {
-  color: inherit;
-  text-decoration: none;
+.footer a { 
+    color: inherit;
+    text-decoration: none;
 }
 
 .footer__link {
-  font-weight: var(--fw-reg);
+    font-weight: var(--fw-reg);
 }
 
 .footer__link:hover,
 .social-list__link:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .footer__link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .social-list {
-  list-style: none; /* Remove Bullet Points */
-  display: flex; /* Put icons next to eachother */
-  justify-content: center;
-  margin: 2em 0 0;
-  padding: 0;
+    list-style: none; /* Remove Bullet Points */
+    display: flex; /* Put icons next to eachother */
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
 }
 
 .social-list__item + .social-list__item {
-  margin-left: 0.5em;
+    margin-left: 0.5em;
 }
 
 .social-list__link {
-  padding: 0.5em;
+    padding: 0.5em;
 }
 
 .individual-item {
-  text-align: center;
+    text-align: center;
 }
 
 .individual-item,
 .individual-item img {
-  padding: 0 2em 2em;
-  max-width: 1000px;
-  width: 60%;
-  margin: 0 auto;
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .individual-item img:hover {
-  cursor: pointer;
+    cursor: pointer;
+    /* transform: scale(1.1); REMOVED to avoid conflict with slideshow behavior, or handled by more specific rules */
+}
+
+.slideshow-container .slide-item img:hover {
+    transform: none; /* Override any general hover scale effect */
+    cursor: default; 
 }
 
 .individual-item p {
-  max-width: 2000px;
-  font-size: var(--fs-h3);
+    max-width: 2000px;
+    font-size: var(--fs-h3);
 
-  /* To Keep top and bottom margins set to default */
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.5em;
+    /* To Keep top and bottom margins set to default */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
 }
 
 .individual-item h2 {
-  font-size: var(--fs-h2);
-  margin-top: 1em;
+    font-size: var(--fs-h2);
+    margin-top: 1em;
 }
 
 .individual-item h3 {
-  font-size: var(--fs-h3);
-  margin-top: 1em;
+    font-size: var(--fs-h3);
+    margin-top: 1em;
 }
 
 /* Custom Links */
 .custom-link {
-  color: var(--clr-accent);
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-reg);
-  text-decoration: none;
-  opacity: 1;
+    color: var(--clr-accent);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
+    text-decoration: none;
+    opacity: 1;
 }
 
 .custom-link:hover {
-  opacity: 0.7;
-  text-decoration: underline;
-  /* Add any other hover styles here */
+    opacity: 0.7;
+    /* text-decoration: underline; Removed */
 }
 
-/* SLIDESHOW */
-* {
-  box-sizing: border-box;
+.custom-link:hover span { 
+    text-decoration: underline;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
 .slideshow-container img {
@@ -669,7 +750,7 @@ h3 {
 }
 
 .iframe-container.landscape {
-  padding-top: 56.25%;
+    padding-top: 56.25%;
 }
 
 .iframe-container.portrait {
@@ -691,42 +772,75 @@ h3 {
 /* Next & previous buttons */
 .prev,
 .next {
-  left: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: var(--clr-accent);
-  font-weight: bold;
-  font-size: var(--fs-h3);
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  transform: translateY(-50%);
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: var(--clr-accent);
+    font-weight: bold;
+    font-size: var(--fs-h3);
+    transition: 0.6s ease;
+    user-select: none;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-rad);
+}
+
+.prev {
+    border-top-right-radius: var(--border-rad);
+    border-bottom-right-radius: var(--border-rad);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  left: auto;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    left: auto;
+    border-top-left-radius: var(--border-rad);
+    border-bottom-left-radius: var(--border-rad);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: var(--clr-secondary);
+    background-color: var(--clr-secondary);
 }
 
 /* Caption text */
 .text {
+  /* Original styles commented out for clarity of change 
   color: var(--clr-secondary);
   font-size: var(--fs-h3);
-  padding: -3em 2em;
+  padding: -3em 2em; 
   position: absolute;
   width: 100%;
+  text-align: center; 
+  */
+  position: absolute;
+  bottom: 2.5em; /* Adjust as needed for padding from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto; /* Fit to content, or max-width if needed */
+  max-width: 90%; /* Prevent caption from being too wide on large images */
+  padding: 0.5em 1em;
+  background-color: var(--clr-primary-static); /* Default: white background */
+  color: var(--clr-secondary-static);       /* Default: dark text */
+  font-size: var(--fs-h3); 
+  font-weight: var(--fw-bold); /* Bolded text */
+  border-radius: var(--border-rad); /* Rounded corners */
   text-align: center;
+  box-shadow: var(--bs); /* Optional: adds a subtle shadow like other elements */
+  opacity: 0.9; /* Optional: slight transparency */
+}
+
+body.dark-theme .slideshow-container .text {
+    background-color: var(--clr-secondary-static); /* Dark mode: dark background */
+    color: var(--clr-primary-static);           /* Dark mode: light text */
 }
 
 /* Number text (1/3 etc) */
@@ -769,4 +883,257 @@ h3 {
   to {
     opacity: 1;
   }
+}
+
+/* Add this rule to hide slides by default */
+.slideshow-container .slides-wrapper > .slide-item {
+    display: none; /* Hide all slides by default */
+}
+
+.icon-link i {
+    margin-right: 0.4em; 
+}
+
+/* Project Content Styling (Inspired by GhostTyper-like themes) */
+.project-content {
+    max-width: 800px; /* Adjust as needed for comfortable reading width */
+    margin: 2em auto 4em auto; /* Centering and vertical spacing */
+    padding: 0 2em; /* Horizontal padding on smaller screens */
+    color: var(--clr-secondary);
+    font-family: var(--ff-primary);
+    line-height: 1.7;
+}
+
+.project-content h1,
+.project-content h2,
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6 {
+    font-family: var(--ff-primary); /* Using your primary font for headings in content */
+    color: var(--clr-secondary);
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    line-height: 1.3;
+}
+
+.project-content h1 { font-size: 2.5rem; } /* Adjust sizes as needed */
+.project-content h2 { font-size: 2rem; }
+.project-content h3 { font-size: 1.75rem; }
+.project-content h4 { font-size: 1.5rem; }
+.project-content h5 { font-size: 1.25rem; }
+.project-content h6 { font-size: 1rem; }
+
+.project-content p {
+    margin-bottom: 1.5em;
+}
+
+/* Original .project-content a rules */
+.project-content a:not(.prev):not(.next):not(.google-album-button) {
+    color: var(--clr-accent); 
+    text-decoration: underline;
+    text-decoration-color: var(--clr-accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    /* General font-weight or font-size for these links might be here or inherited */
+}
+
+.project-content a:not(.prev):not(.next):not(.google-album-button):hover {
+    color: var(--clr-accent);
+    text-decoration-color: var(--clr-secondary); 
+    opacity: 0.8;
+}
+
+/* For INLINE links (not the only child in a paragraph) that have both .custom-link and .icon-link classes */
+.project-content p a.custom-link.icon-link:not(:only-child),
+.about-me__body p a.custom-link.icon-link:not(:only-child) {
+    font-size: inherit !important;   /* Override .custom-link font size */
+    font-weight: inherit !important;  /* Override .custom-link font weight if necessary */
+    text-decoration: underline !important; /* Restore underline, overriding .custom-link's 'none' */
+    text-decoration-color: var(--clr-accent) !important; /* Match .project-content a */
+    text-decoration-thickness: 1px !important;          /* Match .project-content a */
+    text-underline-offset: 3px !important;            /* Match .project-content a */
+    /* color is var(--clr-accent) from .custom-link, which matches .project-content a */
+}
+
+/* Hide the <i> tag icon INSIDE an INLINE link that has .custom-link and .icon-link classes */
+.project-content p a.custom-link.icon-link:not(:only-child) i,
+.about-me__body p a.custom-link.icon-link:not(:only-child) i { 
+    display: none !important;
+    margin-right: 0 !important; /* Remove any margin the icon might have */
+}
+
+/* For STANDALONE links (a link as the only child of a paragraph) */
+/* These will now correctly use the .custom-link and .icon-link styles from render-link.html */
+.project-content p > a:only-child.custom-link.icon-link,
+.about-me__body p > a:only-child.custom-link.icon-link {
+    /* font-size: var(--fs-h3); /* This is already applied by .custom-link, so no need to repeat unless overriding */
+    /* Icons will be visible by default as they are not hidden by the rules above */
+}
+
+/* Styling for the <span> inside standalone links, if needed */
+.project-content p > a:only-child.custom-link.icon-link span,
+.about-me__body p > a:only-child.custom-link.icon-link span {
+    text-decoration: underline; /* Ensure span text is underlined if a.custom-link itself isn't */
+}
+
+.project-content p > a:only-child.custom-link.icon-link:hover span,
+.about-me__body p > a:only-child.custom-link.icon-link:hover span {
+    /* text-decoration: none; */ /* Optional: remove underline on hover for the span */
+}
+
+.project-content strong {
+    font-weight: var(--fw-bold);
+}
+
+.project-content em {
+    font-style: italic;
+}
+
+.project-content ul,
+.project-content ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em; /* Standard indentation */
+}
+
+.project-content li {
+    margin-bottom: 0.5em;
+}
+
+.project-content blockquote {
+    border-left: 4px solid var(--clr-accent);
+    padding-left: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.5em;
+    font-style: italic;
+    color: var(--clr-secondary); /* Or a slightly muted version */
+    opacity: 0.9;
+}
+
+.project-content hr {
+    border: 0;
+    height: 1px;
+    background: var(--clr-secondary);
+    opacity: 0.2;
+    margin: 3em 0;
+}
+
+/* Ensuring slideshow, iframe, and image styles are not negatively impacted */
+/* These existing styles should generally take precedence due to their specificity */
+/* or because the new .project-content styles are for general text elements. */
+
+.project-content .slideshow-container,
+.project-content .iframe-container,
+.project-content img { /* Reverted selector */
+    margin-left: auto;  /* Center these elements if they are narrower than .project-content */
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* If your images inside markdown content need specific max-width within the new theme */
+.project-content img { /* Reverted selector */
+    max-width: 100%;
+    width: 100%; /* Make image fill container width */
+    height: auto;
+    display: block; /* Ensure block display for centering */
+    border-radius: var(--border-rad); /* Consistent border radius */
+    max-height: 80vh; /* Match slideshow image max height */
+    object-fit: contain; /* Ensure image maintains aspect ratio while filling width */
+}
+
+/* Any custom link styling with icons should be handled by .custom-link or .icon-link classes */
+/* and shouldn't be overridden by the generic .project-content a styles if specificity is correct. */
+
+/* We are not re-styling code blocks (.project-content pre, .project-content code) yet, */
+/* as that can be a separate step if you have specific syntax highlighting or styling in mind. */
+/* For now, they will inherit the base font and color. */
+
+/* Styling for Code Blocks */
+.project-content pre {
+    background-color: var(--clr-secondary-static); /* Dark background */
+    color: var(--clr-primary-static); /* Light text for the code block */
+    font-family: var(--ff-secondary); /* Monospace font */
+    padding: 1.5em; /* Increased inner padding */
+    border-radius: var(--border-rad); /* Consistent border radius */
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: var(--bs); /* Optional: add a subtle shadow like other elements */
+}
+
+.project-content pre code {
+    font-family: inherit; /* Inherit monospace font from pre */
+    color: inherit; /* Inherit light text color from pre */
+    background: none; /* Ensure no background on the inline code element itself */
+    padding: 0; /* Reset padding for inline code if any */
+    font-size: 0.95em; /* Slightly smaller font size for code, adjust as needed */
+    line-height: 1.6; /* Adjust line height within code block for readability */
+}
+
+/* If you use inline code snippets `like this`, they might need separate styling */
+/* This targets code not inside pre, and gives it a subtle different look */
+.project-content p > code,
+.project-content li > code,
+.project-content table code { /* Add other parent elements as needed */
+    background-color: rgba(0,0,0,0.05); /* Very light gray background */
+    color: var(--clr-accent); /* Accent color for inline code */
+    font-family: var(--ff-secondary);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+body.dark-theme .project-content p > code,
+body.dark-theme .project-content li > code,
+body.dark-theme .project-content table code {
+    background-color: rgba(255,255,255,0.1); /* Lighter background for dark theme */
+    /* color: var(--clr-accent); /* Accent color usually fine, or adjust for dark theme */
+}
+
+/* Google Photos Album Embed Styling */
+.google-photos-album-embed {
+    text-align: center; /* Center the button and note */
+    margin: 2em auto; /* Vertical and horizontal centering within its container */
+    padding: 1em;
+    background-color: var(--clr-primary); /* Or a subtle background */
+    border: 1px solid var(--clr-secondary-static_alpha); /* Using a hypothetical alpha color or a light gray */
+    border-radius: var(--border-rad);
+}
+
+.btn.google-photos-btn {
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    background-color: #4285F4; /* Google Blue */
+    color: white;
+    padding: 0.75em 1.5em;
+    font-weight: var(--fw-bold);
+    text-transform: none; /* Overriding general .btn uppercase if desired */
+}
+
+.btn.google-photos-btn i {
+    margin-right: 0.5em;
+}
+
+.btn.google-photos-btn:hover {
+    background-color: #3578E5; /* Darker Google Blue */
+    color: white;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.google-photos-note {
+    font-size: 0.9em;
+    color: var(--clr-secondary);
+    opacity: 0.7;
+    margin-top: 1em;
+}
+
+body.dark-theme .google-photos-album-embed {
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-primary-static_alpha); /* Adjust for dark theme */
+}
+
+body.dark-theme .google-photos-note {
+    color: var(--clr-primary);
 }
