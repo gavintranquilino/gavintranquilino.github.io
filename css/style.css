@@ -12,7 +12,7 @@
     --ff-secondary: 'Source Code Pro', monospace;
 
     /* Set Font weight */
-    --fw-reg: 300;
+    --fw-reg: 400;
     --fw-bold: 900;
 
     /* Colour */
@@ -26,7 +26,7 @@
     --fs-h1: 3rem; /* 1rem = 16px */
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;   
-    --fs-body: 1rem;
+    --fs-body: 1.125rem; /* Instead of 1rem */
 
     --border-rad: 10px;
 
@@ -48,7 +48,7 @@ body.dark-theme {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;   
-        --fs-body: 1.125rem;
+        --fs-body: 1.25rem; /* Instead of 1.125rem */
     }
 }
 
@@ -692,7 +692,7 @@ body.dark-theme .about-me--btn.google-album-button:hover {
     /* To Keep top and bottom margins set to default */
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
 
 .individual-item h2 {
@@ -901,7 +901,6 @@ body.dark-theme .slideshow-container .text {
     padding: 0 2em; /* Horizontal padding on smaller screens */
     color: var(--clr-secondary);
     font-family: var(--ff-primary);
-    line-height: 1.7;
 }
 
 .project-content h1,
@@ -925,7 +924,10 @@ body.dark-theme .slideshow-container .text {
 .project-content h6 { font-size: 1rem; }
 
 .project-content p {
-    margin-bottom: 1.5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 0.8em;
+    font-size: var(--fs-body);
 }
 
 /* Original .project-content a rules */
