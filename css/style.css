@@ -179,14 +179,6 @@ h3 { font-size: var(--fs-h3); }
     height: 0 !important;
 }
 
-/* For STANDALONE links (a link as the only child of a paragraph) in .about-me__body */
-/* These links can retain their potentially different font size and icon. */
-/* If their font size needs adjustment, do it here. Icons are assumed to be handled by existing rules or markdown. */
-.about-me__body p > a:only-child {
-    /* Example: font-size: 1.1em; */
-    /* Standalone links will keep their icons if they have them via markdown or other CSS. */
-}
-
 /* Header */
 
 .header {
@@ -590,7 +582,7 @@ body.dark-theme .about-me--btn.google-album-button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* flexible columns */
     min-width: 0;
-    max-width: 2000px;
+    /* max-width: 2000px; */
     margin: 0 auto;
 }
 
@@ -965,23 +957,10 @@ body.dark-theme .slideshow-container .text {
     margin-right: 0 !important; /* Remove any margin the icon might have */
 }
 
-/* For STANDALONE links (a link as the only child of a paragraph) */
-/* These will now correctly use the .custom-link and .icon-link styles from render-link.html */
-.project-content p > a:only-child.custom-link.icon-link,
-.about-me__body p > a:only-child.custom-link.icon-link {
-    /* font-size: var(--fs-h3); /* This is already applied by .custom-link, so no need to repeat unless overriding */
-    /* Icons will be visible by default as they are not hidden by the rules above */
-}
-
 /* Styling for the <span> inside standalone links, if needed */
 .project-content p > a:only-child.custom-link.icon-link span,
 .about-me__body p > a:only-child.custom-link.icon-link span {
     text-decoration: underline; /* Ensure span text is underlined if a.custom-link itself isn't */
-}
-
-.project-content p > a:only-child.custom-link.icon-link:hover span,
-.about-me__body p > a:only-child.custom-link.icon-link:hover span {
-    /* text-decoration: none; */ /* Optional: remove underline on hover for the span */
 }
 
 .project-content strong {
