@@ -29,6 +29,7 @@
     --fs-body: 1.125rem; /* Instead of 1rem */
 
     --border-rad: 10px;
+    --img-height: 50vh;
 
     /* box shadow 0.25 right, 0.25 down 0.75 blur*/
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
@@ -723,12 +724,22 @@ body.dark-theme .about-me--btn.google-album-button:hover {
 }
 
 .slideshow-container img {
-    max-height: 80vh;
+    max-height: var(--img-height);
     max-width: 100%;
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
     border-radius: var(--border-rad);
     padding: 0;
+    object-fit: contain; /* Ensure image maintains aspect ratio */
+    display: block; /* Ensure block display for centering */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Make slide-item containers fit their image content width */
+.slideshow-container .slides-wrapper {
+    width: fit-content; /* Fit to the width of the image content */
+    margin: 0 auto; /* Center the slides wrapper within the slideshow container */
+    position: relative; /* Maintain positioning context for absolute elements like captions */
 }
 
 .iframe-container {
@@ -1016,12 +1027,12 @@ body.dark-theme .slideshow-container .text {
 /* If your images inside markdown content need specific max-width within the new theme */
 .project-content img { /* Reverted selector */
     max-width: 100%;
-    width: 100%; /* Make image fill container width */
-    height: auto;
+    width: auto; /* Let image take its natural width, not fill container */
+    height: var(--img-height); /* Set actual height using CSS variable */
     display: block; /* Ensure block display for centering */
     border-radius: var(--border-rad); /* Consistent border radius */
-    max-height: 80vh; /* Match slideshow image max height */
-    object-fit: contain; /* Ensure image maintains aspect ratio while filling width */
+    object-fit: contain; /* Ensure image maintains aspect ratio while maintaining viewport height */
+    margin: 0 auto; /* Center the image */
 }
 
 /* Any custom link styling with icons should be handled by .custom-link or .icon-link classes */
