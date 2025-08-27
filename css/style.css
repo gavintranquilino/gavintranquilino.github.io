@@ -1129,3 +1129,21 @@ body.dark-theme .google-photos-album-embed {
 body.dark-theme .google-photos-note {
     color: var(--clr-primary);
 }
+
+/* Tech Stack Icons Styling */
+.tech-stack-icon {
+    font-size: var(--fs-body) !important; /* Use same font size as body text, force override */
+    /* color: var(--clr-secondary) !important; Use same color as body text, force override */
+    margin-right: 0.3em; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text baseline */
+    display: inline-block; /* Ensure proper display */
+    width: auto !important; /* Override any width restrictions */
+    height: auto !important; /* Override any height restrictions */
+    min-width: 1em; /* Ensure minimum visible size */
+    min-height: 1em; /* Ensure minimum visible size */
+}
+
+/* Optional: If you want the icons to have accent color instead */
+.tech-stack-icon.accent {
+    color: var(--clr-accent) !important;
+}
