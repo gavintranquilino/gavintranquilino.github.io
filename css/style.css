@@ -596,9 +596,10 @@ body.dark-theme .about-me--btn.google-album-button:hover {
 }
 
 .portfolio__img {
+    width: 100%;
+    height: auto;
     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
     opacity 250ms linear;
-    ;
 }
 
 .portfolio__item:focus {
