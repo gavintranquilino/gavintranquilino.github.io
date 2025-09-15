@@ -132,4 +132,146 @@ function initializeSlideshow(container) {
 }
 // -------- END SLIDESHOW LOGIC --------
 
+// -------- PORTFOLIO VIEW TOGGLE LOGIC --------
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultViewBtn = document.getElementById('defaultViewBtn');
+    const collageViewBtn = document.getElementById('collageViewBtn');
+    const technicalViewBtn = document.getElementById('technicalViewBtn');
+    const workSection = document.querySelector('.my-work');
+    const workHeader = document.querySelector('.work-header');
+    const portfolioContainer = document.getElementById('portfolioContainer');
+    const introSection = document.querySelector('.intro');
+    const aboutSection = document.querySelector('.about-me');
+    const technicalHeader = document.querySelector('.technical-view-header');
+
+    if (defaultViewBtn && collageViewBtn && technicalViewBtn && portfolioContainer) {
+        
+                // Default View - title underneath each item, intro/about visible
+        defaultViewBtn.addEventListener('click', () => {
+            // Update button states
+            setActiveButton(defaultViewBtn);
+            
+            // Show intro and about sections
+            if (introSection) introSection.style.display = '';
+            if (aboutSection) aboutSection.style.display = '';
+            
+            // Show work header (title and subtitle)
+            showWorkHeader();
+            
+            // Hide technical view header
+            const technicalHeader = document.querySelector('.technical-view-header');
+            if (technicalHeader) technicalHeader.style.display = 'none';
+            
+            // Configure portfolio items for default view
+            const portfolioItems = portfolioContainer.querySelectorAll('.portfolio__item-wrapper');
+            portfolioItems.forEach(wrapper => {
+                const link = wrapper.querySelector('.portfolio__item');
+                const defaultContent = wrapper.querySelector('.default-view-content');
+                const technicalContent = wrapper.querySelector('.technical-view-content');
+                
+                if (link) link.style.display = '';
+                if (defaultContent) defaultContent.style.display = 'block';
+                if (technicalContent) technicalContent.style.display = 'none';
+            });
+            
+            // Reset portfolio container styling
+            portfolioContainer.className = 'portfolio';
+            workSection.className = 'my-work';
+        });
+
+        // Collage View - only images, tight spacing, no text
+        collageViewBtn.addEventListener('click', () => {
+            // Update button states
+            setActiveButton(collageViewBtn);
+            
+            // Show intro and about sections
+            if (introSection) introSection.style.display = '';
+            if (aboutSection) aboutSection.style.display = '';
+            
+            // Show work header (title and subtitle)
+            showWorkHeader();
+            
+            // Hide technical view header
+            const technicalHeader = document.querySelector('.technical-view-header');
+            if (technicalHeader) technicalHeader.style.display = 'none';
+            
+            // Configure portfolio items for collage view
+            const portfolioItems = portfolioContainer.querySelectorAll('.portfolio__item-wrapper');
+            portfolioItems.forEach(wrapper => {
+                const link = wrapper.querySelector('.portfolio__item');
+                const defaultContent = wrapper.querySelector('.default-view-content');
+                const technicalContent = wrapper.querySelector('.technical-view-content');
+                
+                if (link) link.style.display = '';
+                if (defaultContent) defaultContent.style.display = 'none';
+                if (technicalContent) technicalContent.style.display = 'none';
+            });
+            
+            // Add collage view class for tight spacing
+            portfolioContainer.className = 'portfolio collage-view';
+            workSection.className = 'my-work';
+        });
+
+                // Technical View - title + bullet points, print-friendly
+        technicalViewBtn.addEventListener('click', () => {
+            // Update button states
+            setActiveButton(technicalViewBtn);
+            
+            // Hide intro and about sections for technical view
+            if (introSection) introSection.style.display = 'none';
+            if (aboutSection) aboutSection.style.display = 'none';
+            
+            // Hide work header for technical view
+            hideWorkHeader();
+            
+            // Show technical view header
+            const technicalHeader = document.querySelector('.technical-view-header');
+            if (technicalHeader) technicalHeader.style.display = 'block';
+            
+            // Configure portfolio items for technical view
+            const portfolioItems = portfolioContainer.querySelectorAll('.portfolio__item-wrapper');
+            portfolioItems.forEach(wrapper => {
+                const link = wrapper.querySelector('.portfolio__item');
+                const defaultContent = wrapper.querySelector('.default-view-content');
+                const technicalContent = wrapper.querySelector('.technical-view-content');
+                
+                if (link) link.style.display = '';
+                if (defaultContent) defaultContent.style.display = 'none';
+                if (technicalContent) technicalContent.style.display = 'block';
+            });
+            
+            // Add technical view class for styling and lighter background
+            portfolioContainer.className = 'portfolio technical-view';
+            workSection.className = 'my-work technical-background';
+        });
+
+        // Helper functions
+        function setActiveButton(activeBtn) {
+            [defaultViewBtn, collageViewBtn, technicalViewBtn].forEach(btn => {
+                btn.classList.remove('active');
+            });
+            activeBtn.classList.add('active');
+        }
+
+        function showWorkHeader() {
+            if (workHeader) {
+                const title = workHeader.querySelector('.section__title--work');
+                const subtitle = workHeader.querySelector('.section__subtitle--work');
+                if (title) title.style.display = '';
+                if (subtitle) subtitle.style.display = '';
+            }
+        }
+
+        function hideWorkHeader() {
+            if (workHeader) {
+                const title = workHeader.querySelector('.section__title--work');
+                const subtitle = workHeader.querySelector('.section__subtitle--work');
+                if (title) title.style.display = 'none';
+                if (subtitle) subtitle.style.display = 'none';
+            }
+        }
+    }
+});
+// -------- END PORTFOLIO VIEW TOGGLE LOGIC --------
+
 

@@ -613,6 +613,182 @@ body.dark-theme .about-me--btn.google-album-button:hover {
     opacity: 0.75;
 }
 
+/* Toggle buttons for portfolio view */
+.view-toggle-buttons {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.toggle-btn {
+    background: var(--clr-primary-static);
+    color: var(--clr-secondary-static);
+    border: 2px solid var(--clr-accent);
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-rad);
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: var(--clr-accent);
+    color: var(--clr-primary-static);
+}
+
+.toggle-btn.active {
+    background: var(--clr-accent);
+    color: var(--clr-primary-static);
+}
+
+/* Base portfolio item wrapper - minimal spacing by default */
+.portfolio__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Collage View - tight spacing like original, no text content */
+.portfolio.collage-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced from 300px to 250px */
+    min-width: 0;
+    margin: 0 auto;
+    gap: 10px; /* Add small gap between grid items for tighter control */
+}
+
+.portfolio.collage-view .portfolio__item-wrapper {
+    margin: 0; /* Remove wrapper margin for tight spacing */
+}
+
+.portfolio.collage-view .portfolio__item {
+    margin: 10px; /* Reduced from 20px to 10px for tighter spacing */
+}
+
+/* Default View - title underneath */
+.default-view-content {
+    /* margin-top: 1em; */
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Technical View - print-friendly with lighter background */
+.my-work.technical-background {
+    background-color: var(--clr-primary); /* Use lighter background variable */
+    color: var(--clr-secondary); /* Use darker text variable */
+}
+
+.portfolio.technical-view {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+}
+
+/* Technical view header message */
+.technical-view-header {
+    grid-column: 1 / -1; /* Span all columns */
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.technical-view-header h1 {
+    font-size: var(--fs-h2);
+    color: var(--clr-secondary);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.portfolio.technical-view .portfolio__item-wrapper {
+    margin: 10px;
+}
+
+.technical-view-content {
+    margin-top: 1em;
+    text-align: left; /* Left-align all content in technical view */
+    max-width: 300px;
+    width: 100%;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    margin: 0.5em 0;
+    font-weight: var(--fw-bold);
+}
+
+/* Default view project title - centered */
+.default-view-content .project-title {
+    color: var(--clr-primary-static); /* Use existing color for default view */
+    text-align: center;
+}
+
+/* Technical view project title - centered, darker text */
+/* Technical view project title - centered, darker text */
+.technical-view-content .project-title {
+    color: var(--clr-secondary); /* Use darker text for technical view */
+    text-align: center; /* Changed to center */
+}
+
+.project-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0;
+    text-align: left; /* Left-align bullet points */
+}
+
+/* Technical view header message */
+.technical-view-header {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.technical-header-message {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    color: #c14a09;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.project-bullets li {
+    margin: 0.3em 0;
+    font-size: 0.9rem;
+    color: var(--clr-secondary); /* Use darker text for bullet points in technical view */
+    position: relative;
+    padding-left: 1.2em;
+    text-align: left; /* Ensure individual bullets are left-aligned */
+}
+
+.project-bullets li::before {
+    content: "•";
+    color: var(--clr-accent);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Print media query for actual printing */
+@media print {
+    .view-toggle-buttons {
+        display: none !important;
+    }
+    
+    .portfolio.technical-view .portfolio__item {
+        break-inside: avoid;
+        margin: 10px 0;
+    }
+    
+    .technical-view-content {
+        page-break-inside: avoid;
+    }
+}
+
 /* Footer */
 
 .footer {
