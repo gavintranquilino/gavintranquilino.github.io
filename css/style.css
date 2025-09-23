@@ -993,21 +993,13 @@ body.dark-theme .about-me--btn.google-album-button:hover {
 
 /* Caption text */
 .text {
-  /* Original styles commented out for clarity of change 
-  color: var(--clr-secondary);
-  font-size: var(--fs-h3);
-  padding: -3em 2em; 
-  position: absolute;
-  width: 100%;
-  text-align: center; 
-  */
-  position: absolute;
-  bottom: 2.5em; /* Adjust as needed for padding from bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto; /* Fit to content, or max-width if needed */
-  max-width: 90%; /* Prevent caption from being too wide on large images */
-  padding: 0.5em 1em;
+  position: static; /* Changed from absolute to static positioning */
+  bottom: auto; /* Reset bottom positioning */
+  left: auto; /* Reset left positioning */
+  transform: none; /* Remove transform */
+  width: fit-content; /* Fit to content width instead of full width */
+  max-width: 100%; /* Prevent caption from exceeding image width */
+  padding: 0.8em 1em; /* Increased padding for better spacing */
   background-color: var(--clr-primary-static); /* Default: white background */
   color: var(--clr-secondary-static);       /* Default: dark text */
   font-size: var(--fs-h3); 
@@ -1016,6 +1008,7 @@ body.dark-theme .about-me--btn.google-album-button:hover {
   text-align: center;
   box-shadow: var(--bs); /* Optional: adds a subtle shadow like other elements */
   opacity: 0.9; /* Optional: slight transparency */
+  margin: 1em auto 0 auto; /* Center the caption and add space above */
 }
 
 body.dark-theme .slideshow-container .text {
@@ -1070,6 +1063,14 @@ body.dark-theme .slideshow-container .text {
     display: none; /* Hide all slides by default */
 }
 
+/* Update slide-item to use flex layout for proper image/caption stacking */
+.slideshow-container .slide-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Maintain positioning context for nav buttons */
+}
+
 .icon-link i {
     margin-right: 0.4em; 
 }
@@ -1091,8 +1092,8 @@ body.dark-theme .slideshow-container .text {
 .project-content h6 {
     font-family: var(--ff-primary); /* Using your primary font for headings in content */
     color: var(--clr-secondary);
-    margin-top: 0.5em;
-    margin-bottom: 0em;
+    margin-top: 2em; /* Increased from 0.5em for better spacing */
+    margin-bottom: 0.5em; /* Increased from 0em for better spacing */
     line-height: 1.3;
 }
 
