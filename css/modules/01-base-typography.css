@@ -1,0 +1,131 @@
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--clr-primary); /* variable from root */
+    color: var(--clr-secondary);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 3em 3em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold);}
+
+:focus { 
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
+    padding: 0.5em 1.5em;
+    background: var(--clr-primary-static);
+    border-radius: 5px;
+    color: var(--clr-secondary-static);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--clr-accent);
+    transform: scale(1.1);
+    outline: 3px solid var(--clr-primary);
+    outline-offset: 3px;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+.section__title { /* [.] = class, [#] = id */ 
+    margin-bottom: 0.25em; /* em for text, relative to font size */
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+    /* margin-bottom: 1em; */
+}
+
+.section__title--intro strong { /* Edit strong tag of intro only */
+    display: block; /* Keep name on separate line */
+}
+
+.section__subtitle { /* [.] = class, [#] = id */ 
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    border-radius: var(--border-rad);
+    padding: 0.25em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+/* NEW: Link styling within .about-me__body from homepage .Content */
+
+/* For INLINE links (within a paragraph that has other text) in .about-me__body */
+.about-me__body p a:not(:only-child) {
+    font-size: inherit !important;   /* Ensure font size matches surrounding text */
+    font-weight: inherit !important;  /* Ensure font weight matches surrounding text */
+    /* text-decoration: underline; */ /* Ensure underline if not covered by general 'a' styles */
+    /* color: var(--clr-accent); */  /* Ensure link color if not covered by general 'a' styles */
+}
+
+/* Hide <i> tag icons that are SIBLINGS to an inline link in .about-me__body */
+.about-me__body p a:not(:only-child) + i {
+    display: none !important;
+}
+
+/* Hide <i> tag icons that are CHILDREN of an inline link in .about-me__body */
+.about-me__body p a:not(:only-child) i {
+    display: none !important;
+}
+
+/* Hide icons added by CSS pseudo-elements for inline links in .about-me__body */
+.about-me__body p a:not(:only-child)::before,
+.about-me__body p a:not(:only-child)::after {
+    content: "" !important; /* Important to override other content rules */
+    display: none !important;
+    margin: 0 !important; /* Reset any margins/paddings from icon rules */
+    padding: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.is-hidden {
+    display: none;
+}
+

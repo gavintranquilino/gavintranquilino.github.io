@@ -1,0 +1,214 @@
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo {
+    width: 10%;
+}
+
+.nav {
+    position: fixed;
+    background: var(--clr-secondary-static);
+    color: var(--clr-primary-static);
+    /* Fill screen */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Keep in front */
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);  
+}
+
+.nav-toggle {
+    padding: 0.5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+    border-radius: 5px; /* Added for rounded focus outline */
+}
+
+/* Global :focus style will apply to .nav-toggle by default now */
+/* .nav-toggle:focus {
+    outline: none; 
+} */
+
+/* Default focus style for nav-toggle (closed state) */
+.nav-toggle:focus {
+    outline: none; /* Remove default/global outline */
+    box-shadow: 0 0 0 3px var(--clr-accent); /* Rounded outline */
+}
+
+.nav-open .nav {
+    transform: translateX(0%);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+    /* outline: none; Ensured by the general .nav-toggle:focus above or can be more specific if needed */
+}
+
+/* Specifically remove outline AND box-shadow for nav-toggle when nav is open and button is focused */
+/* The focus indication for the open state is handled by box-shadows on the .hamburger elements themselves */
+.nav-open .nav-toggle:focus {
+    outline: none;
+    box-shadow: none; /* Remove the box-shadow from the closed state */
+}
+
+.nav-open .hamburger {
+    transform: rotate(225deg);
+    background: var(--clr-primary-static);
+    box-shadow: 0 0 0 1px var(--clr-primary-static);
+}
+
+/* Custom focus style for open hamburger (X) - box-shadow acts as shaped, offset outline */
+.nav-open .nav-toggle:focus .hamburger {
+    box-shadow: 0 0 0 1px var(--clr-primary-static), /* X bar */
+                0 0 0 3px var(--clr-secondary-static), /* Gap (using nav background). Spread = 1px X + 2px gap */
+                0 0 0 5px var(--clr-accent);       /* Outline. Spread = 1px X + 2px gap + 2px outline */
+    outline: none; /* Explicitly ensure no default outline for the X state */
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+    background: var(--clr-primary-static);
+    box-shadow: 0 0 0 1px var(--clr-primary-static);
+}
+
+/* Custom focus style for open hamburger (X) ::before part - box-shadow acts as shaped, offset outline */
+.nav-open .nav-toggle:focus .hamburger::before {
+    box-shadow: 0 0 0 1px var(--clr-primary-static), /* X bar */
+                0 0 0 3px var(--clr-secondary-static), /* Gap. Spread = 1px X + 2px gap */
+                0 0 0 5px var(--clr-accent);       /* Outline. Spread = 1px X + 2px gap + 2px outline */
+    outline: none; /* Explicitly ensure no default outline for the X state */
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-accent);
+    width: 3em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    bottom: 6px;
+}
+
+/* NO Custom focus style for closed hamburger - box-shadow acts as shaped outline */
+/* Applied when .nav-toggle:focus and not .nav-open */
+.nav-toggle:focus .hamburger,
+.nav-toggle:focus .hamburger::before,
+.nav-toggle:focus .hamburger::after {
+    /* Make it slightly more prominent if it's the only indicator */
+    box-shadow: none; 
+}
+
+.theme-toggle {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background: var(--clr-accent);
+    color: var(--clr-secondary);
+    font-size: 1em;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    right: 1.5em;
+    top: 3em;
+    z-index: 100;
+    transition: transform 200ms ease-in-out;
+}
+
+.theme-toggle:hover {
+    background-color: var(--clr-accent);
+    transform: scale(1.1);
+    outline: 3px solid var(--clr-primary);
+    outline-offset: 3px;
+}
+
+.nav-open .to-top {
+    visibility: hidden;
+}
+
+.to-top {
+    border-radius: 5px;
+    padding: 0.5em;
+    background: var(--clr-accent);
+    border: 0;
+    position: fixed;
+    right: 1em;
+    bottom: 0.5em;
+    z-index: 99;
+    transition: background-color .3s, 
+        opacity .5s, visibility .5s;
+}
+
+.to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.up-arrow {
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--clr-primary);
+}
+

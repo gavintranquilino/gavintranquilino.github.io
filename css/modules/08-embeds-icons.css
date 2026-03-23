@@ -1,0 +1,78 @@
+/* Google Photos Album Embed Styling */
+.google-photos-album-embed {
+    text-align: center; /* Center the button and note */
+    margin: 2em auto; /* Vertical and horizontal centering within its container */
+    padding: 1em;
+    background-color: var(--clr-primary); /* Or a subtle background */
+    border: 1px solid var(--clr-secondary-static_alpha); /* Using a hypothetical alpha color or a light gray */
+    border-radius: var(--border-rad);
+}
+
+.btn.google-photos-btn {
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    background-color: #4285F4; /* Google Blue */
+    color: white;
+    padding: 0.75em 1.5em;
+    font-weight: var(--fw-bold);
+    text-transform: none; /* Overriding general .btn uppercase if desired */
+}
+
+.btn.google-photos-btn i {
+    margin-right: 0.5em;
+}
+
+.btn.google-photos-btn:hover {
+    background-color: #3578E5; /* Darker Google Blue */
+    color: white;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.google-photos-note {
+    font-size: 0.9em;
+    color: var(--clr-secondary);
+    opacity: 0.7;
+    margin-top: 1em;
+}
+
+body.dark-theme .google-photos-album-embed {
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-primary-static_alpha); /* Adjust for dark theme */
+}
+
+body.dark-theme .google-photos-note {
+    color: var(--clr-primary);
+}
+
+.google-photos-album-custom__image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.google-photos-album-custom__actions {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.shortcode-error {
+    color: red;
+}
+
+/* Tech Stack Icons Styling */
+.tech-stack-icon {
+    font-size: var(--fs-body) !important; /* Use same font size as body text, force override */
+    /* color: var(--clr-secondary) !important; Use same color as body text, force override */
+    margin-right: 0.3em; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text baseline */
+    display: inline-block; /* Ensure proper display */
+    width: auto !important; /* Override any width restrictions */
+    height: auto !important; /* Override any height restrictions */
+    min-width: 1em; /* Ensure minimum visible size */
+    min-height: 1em; /* Ensure minimum visible size */
+}
+
+/* Optional: If you want the icons to have accent color instead */
+.tech-stack-icon.accent {
+    color: var(--clr-accent) !important;
+}

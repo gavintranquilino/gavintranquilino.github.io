@@ -1,0 +1,192 @@
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-container img {
+    max-height: var(--img-height);
+    max-width: 100%;
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: var(--border-rad);
+    padding: 0;
+    object-fit: contain; /* Ensure image maintains aspect ratio */
+    display: block; /* Ensure block display for centering */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Make slide-item containers fit their image content width */
+.slideshow-container .slides-wrapper {
+    width: fit-content; /* Fit to the width of the image content */
+    margin: 0 auto; /* Center the slides wrapper within the slideshow container */
+    position: relative; /* Maintain positioning context for absolute elements like captions */
+}
+
+.iframe-container {
+    position: relative;
+    max-height: 80vh;
+    max-width: 100%;  
+    height: 0;
+    margin-top: 1em;
+    overflow: hidden;
+    border-radius: var(--border-rad);
+}
+
+.iframe-container.landscape {
+    padding-top: 56.25%;
+}
+
+.iframe-container.portrait {
+    padding-top: 100%; 
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-rad);
+}
+
+/* Hide the images by default */
+.slides1, .slides2 {display: none}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: var(--clr-accent);
+    font-weight: bold;
+    font-size: var(--fs-h3);
+    transition: 0.6s ease;
+    user-select: none;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-rad);
+}
+
+.prev {
+    border-top-right-radius: var(--border-rad);
+    border-bottom-right-radius: var(--border-rad);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    left: auto;
+    border-top-left-radius: var(--border-rad);
+    border-bottom-left-radius: var(--border-rad);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: var(--clr-secondary);
+}
+
+/* Caption text */
+.text {
+  position: static; /* Changed from absolute to static positioning */
+  bottom: auto; /* Reset bottom positioning */
+  left: auto; /* Reset left positioning */
+  transform: none; /* Remove transform */
+  width: fit-content; /* Fit to content width instead of full width */
+  max-width: 100%; /* Prevent caption from exceeding image width */
+  padding: 0.8em 1em; /* Increased padding for better spacing */
+  background-color: var(--clr-primary-static); /* Default: white background */
+  color: var(--clr-secondary-static);       /* Default: dark text */
+  font-size: var(--fs-h3); 
+  font-weight: var(--fw-bold); /* Bolded text */
+  border-radius: var(--border-rad); /* Rounded corners */
+  text-align: center;
+  box-shadow: var(--bs); /* Optional: adds a subtle shadow like other elements */
+  opacity: 0.9; /* Optional: slight transparency */
+  margin: 1em auto 0 auto; /* Center the caption and add space above */
+}
+
+body.dark-theme .slideshow-container .text {
+    background-color: var(--clr-secondary-static); /* Dark mode: dark background */
+    color: var(--clr-primary-static);           /* Dark mode: light text */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: var(--clr-secondary);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 1em;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add this rule to hide slides by default */
+.slideshow-container .slides-wrapper > .slide-item {
+    display: none; /* Hide all slides by default */
+}
+
+/* Update slide-item to use flex layout for proper image/caption stacking */
+.slideshow-container .slide-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Maintain positioning context for nav buttons */
+}
+    .dots-container {
+      text-align: center;
+      margin-top: 1.5em;
+    }
+    .dots-container--centered {
+      text-align: center;
+    }
+    .local-video {
+      width: 100%;
+    }
+
+.icon-link i {
+    margin-right: 0.4em; 
+}
+

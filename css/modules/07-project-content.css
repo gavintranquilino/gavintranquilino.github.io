@@ -1,0 +1,187 @@
+/* Project Content Styling (Inspired by GhostTyper-like themes) */
+.project-content {
+    max-width: 800px; /* Adjust as needed for comfortable reading width */
+    margin: 2em auto 4em auto; /* Centering and vertical spacing */
+    padding: 0 2em; /* Horizontal padding on smaller screens */
+    color: var(--clr-secondary);
+    font-family: var(--ff-primary);
+}
+
+.project-content h1,
+.project-content h2,
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6 {
+    font-family: var(--ff-primary); /* Using your primary font for headings in content */
+    color: var(--clr-secondary);
+    margin-top: 2em; /* Increased from 0.5em for better spacing */
+    margin-bottom: 0.5em; /* Increased from 0em for better spacing */
+    line-height: 1.3;
+}
+
+.project-content h1 { font-size: 2.5rem; } /* Adjust sizes as needed */
+.project-content h2 { font-size: 2rem; }
+.project-content h3 { font-size: 1.75rem; }
+.project-content h4 { font-size: 1.5rem; }
+.project-content h5 { font-size: 1.25rem; }
+.project-content h6 { font-size: 1rem; }
+
+.project-content p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 0.8em;
+    font-size: var(--fs-body);
+}
+
+/* Original .project-content a rules */
+.project-content a:not(.prev):not(.next):not(.google-album-button) {
+    color: var(--clr-accent); 
+    text-decoration: underline;
+    text-decoration-color: var(--clr-accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    /* General font-weight or font-size for these links might be here or inherited */
+}
+
+.project-content a:not(.prev):not(.next):not(.google-album-button):hover {
+    color: var(--clr-accent);
+    text-decoration-color: var(--clr-secondary); 
+    opacity: 0.8;
+}
+
+/* For INLINE links (not the only child in a paragraph) that have both .custom-link and .icon-link classes */
+.project-content p a.custom-link.icon-link:not(:only-child),
+.about-me__body p a.custom-link.icon-link:not(:only-child) {
+    font-size: inherit !important;   /* Override .custom-link font size */
+    font-weight: inherit !important;  /* Override .custom-link font weight if necessary */
+    text-decoration: underline !important; /* Restore underline, overriding .custom-link's 'none' */
+    text-decoration-color: var(--clr-accent) !important; /* Match .project-content a */
+    text-decoration-thickness: 1px !important;          /* Match .project-content a */
+    text-underline-offset: 3px !important;            /* Match .project-content a */
+    /* color is var(--clr-accent) from .custom-link, which matches .project-content a */
+}
+
+/* Hide the <i> tag icon INSIDE an INLINE link that has .custom-link and .icon-link classes */
+.project-content p a.custom-link.icon-link:not(:only-child) i,
+.about-me__body p a.custom-link.icon-link:not(:only-child) i { 
+    display: none !important;
+    margin-right: 0 !important; /* Remove any margin the icon might have */
+}
+
+/* Styling for the <span> inside standalone links, if needed */
+.project-content p > a:only-child.custom-link.icon-link span,
+.about-me__body p > a:only-child.custom-link.icon-link span {
+    text-decoration: underline; /* Ensure span text is underlined if a.custom-link itself isn't */
+}
+
+.project-content strong {
+    font-weight: var(--fw-bold);
+}
+
+.project-content em {
+    font-style: italic;
+}
+
+.project-content ul,
+.project-content ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em; /* Standard indentation */
+}
+
+.project-content li {
+    margin-bottom: 0.5em;
+}
+
+.project-content blockquote {
+    border-left: 4px solid var(--clr-accent);
+    padding-left: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.5em;
+    font-style: italic;
+    color: var(--clr-secondary); /* Or a slightly muted version */
+    opacity: 0.9;
+}
+
+.project-content hr {
+    border: 0;
+    height: 1px;
+    background: var(--clr-secondary);
+    opacity: 0.2;
+    margin: 3em 0;
+}
+
+/* Ensuring slideshow, iframe, and image styles are not negatively impacted */
+/* These existing styles should generally take precedence due to their specificity */
+/* or because the new .project-content styles are for general text elements. */
+
+.project-content .slideshow-container,
+.project-content .iframe-container,
+.project-content img { /* Reverted selector */
+    margin-left: auto;  /* Center these elements if they are narrower than .project-content */
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* If your images inside markdown content need specific max-width within the new theme */
+.project-content img { /* Reverted selector */
+    max-width: 100%;
+    width: auto; /* Let image take its natural width, not fill container */
+    height: var(--img-height); /* Set actual height using CSS variable */
+    display: block; /* Ensure block display for centering */
+    border-radius: var(--border-rad); /* Consistent border radius */
+    object-fit: contain; /* Ensure image maintains aspect ratio while maintaining viewport height */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Any custom link styling with icons should be handled by .custom-link or .icon-link classes */
+/* and shouldn't be overridden by the generic .project-content a styles if specificity is correct. */
+
+/* We are not re-styling code blocks (.project-content pre, .project-content code) yet, */
+/* as that can be a separate step if you have specific syntax highlighting or styling in mind. */
+/* For now, they will inherit the base font and color. */
+
+/* Styling for Code Blocks */
+.project-content pre {
+    background-color: var(--clr-secondary-static); /* Dark background */
+    color: var(--clr-primary-static); /* Light text for the code block */
+    font-family: var(--ff-secondary); /* Monospace font */
+    padding: 1.5em; /* Increased inner padding */
+    border-radius: var(--border-rad); /* Consistent border radius */
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: var(--bs); /* Optional: add a subtle shadow like other elements */
+}
+
+.project-content pre code {
+    font-family: inherit; /* Inherit monospace font from pre */
+    color: inherit; /* Inherit light text color from pre */
+    background: none; /* Ensure no background on the inline code element itself */
+    padding: 0; /* Reset padding for inline code if any */
+    font-size: 0.95em; /* Slightly smaller font size for code, adjust as needed */
+    line-height: 1.6; /* Adjust line height within code block for readability */
+}
+
+/* If you use inline code snippets `like this`, they might need separate styling */
+/* This targets code not inside pre, and gives it a subtle different look */
+.project-content p > code,
+.project-content li > code,
+.project-content table code { /* Add other parent elements as needed */
+    background-color: rgba(0,0,0,0.05); /* Very light gray background */
+    color: var(--clr-accent); /* Accent color for inline code */
+    font-family: var(--ff-secondary);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+body.dark-theme .project-content p > code,
+body.dark-theme .project-content li > code,
+body.dark-theme .project-content table code {
+    background-color: rgba(255,255,255,0.1); /* Lighter background for dark theme */
+    /* color: var(--clr-accent); /* Accent color usually fine, or adjust for dark theme */
+}
+

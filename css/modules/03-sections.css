@@ -1,0 +1,235 @@
+/* Intro section */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    border-radius: 50%;
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) { /* Handle Hi, I am Gavin when width > 600*/
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto; /* Keep centered */
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2; /* Keep image to front */
+    }
+
+    .section__subtitle--intro {
+        align-self: start; /* Stop intro box from stretching vertically */ 
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.25em);
+    }
+}
+
+
+/* My Services */
+
+.my-services {
+    background-color: var(--clr-secondary-static);
+    background-image: url(../img/code.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-primary-static);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+    margin: 0;
+}
+
+/* Line below title sudo element */
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em; 
+    background: currentColor; /* Match title clr */
+    opacity: 0.25;
+}
+
+.services { 
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .services {
+        display: flex; /* 3 grid */
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Syle next service tag after the first service tag */
+    .service + .service {
+        margin-left: 2em; 
+    }
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+
+.about-me__img {
+    border-radius: var(--border-rad);
+    box-shadow: var(--bs);
+}
+
+/* Styles for About Me buttons, ensuring they are present */
+
+.about-me__btn {
+  position: relative;
+  text-align: center;
+}
+
+.about-me--btn {
+  display: inline-block;
+  margin: 0 10px; /* Adjust the margin to control the spacing between buttons */
+  padding: 0.5em 1.5em;
+  background: var(--clr-secondary-static); /* Default background */
+  border-radius: 5px;
+  color: var(--clr-primary-static);      /* Default text color */
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.about-me--btn:hover {
+  background-color: var(--clr-accent); /* Accent color on hover */
+  transform: scale(1.1);
+  outline: 3px solid var(--clr-secondary);
+  outline-offset: 3px;
+}
+
+/* Specific hover style for the Google Photos album button */
+.about-me--btn.google-album-button:hover {
+    color: var(--clr-secondary-static); /* Dark text on accent background (for Light Theme) */
+}
+
+body.dark-theme .about-me--btn.google-album-button:hover {
+    color: var(--clr-primary-static); /* Light text on dark accent background (for Dark Theme) */
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: /* Layout */
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    /* Grid Area assigns value to layout */
+    .section__title--about{ 
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        /* Stretch subtitle box through img */
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 1.5em);
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.my-work {
+    background-color: var(--clr-secondary-static);
+    color: var(--clr-primary-static);
+    text-align: center;
+}
+
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* flexible columns */
+    min-width: 0;
+    /* max-width: 2000px; */
+    margin: 0 auto;
+}
+
+.portfolio__item {
+    margin: 20px;
+    border-radius: var(--border-rad);
+    background-color: var(--clr-accent);
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio__img {
+    width: 100%;
+    height: auto;
+    transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+    opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2; /* Keep on top */
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: 0.75;
+}
+
+/* Shared list template pages (section/taxonomy) */
+.list-page {
+    padding: 20px;
+}
+
+.list-page .item-list {
+    list-style: none;
+    padding: 0;
+}
+
+.list-page .item-list__entry {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+

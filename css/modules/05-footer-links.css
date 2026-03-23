@@ -1,0 +1,124 @@
+/* Footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    font-size: var(--fs-h3);    
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: var(--fw-reg);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: 0.7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none; /* Remove Bullet Points */
+    display: flex; /* Put icons next to eachother */
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item + .social-list__item {
+    margin-left: 0.5em;
+}
+
+.social-list__link {
+    padding: 0.5em;
+}
+
+.individual-item {
+    text-align: center;
+}
+
+.individual-item,
+.individual-item img {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.individual-item img:hover {
+    cursor: pointer;
+    /* transform: scale(1.1); REMOVED to avoid conflict with slideshow behavior, or handled by more specific rules */
+}
+
+.slideshow-container .slide-item img:hover {
+    transform: none; /* Override any general hover scale effect */
+    cursor: default; 
+}
+
+.individual-item p {
+    max-width: 2000px;
+    font-size: var(--fs-h3);
+
+    /* To Keep top and bottom margins set to default */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.individual-item h2 {
+    font-size: var(--fs-h2);
+    margin-top: 1em;
+}
+
+.individual-item h3 {
+    font-size: var(--fs-h3);
+    margin-top: 1em;
+}
+
+/* Custom Links */
+.custom-link {
+    color: var(--clr-accent);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
+    text-decoration: none;
+    opacity: 1;
+}
+
+.custom-link:hover {
+    opacity: 0.7;
+    /* text-decoration: underline; Removed */
+}
+
+.custom-link:hover span { 
+    text-decoration: underline;
+}
+
+.webring-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2em;
+}
+
+.webring-nav__arrow {
+    color: var(--clr-accent);
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: var(--fw-bold);
+}
+
+.webring-nav__logo {
+    width: 50px;
+    height: auto;
+}
+
